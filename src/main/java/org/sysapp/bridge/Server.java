@@ -8,7 +8,13 @@ package org.sysapp.bridge;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Properties;
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
+import javax.json.JsonValue;
+import org.apache.commons.io.IOUtils;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.jdom2.JDOMException;
@@ -18,9 +24,6 @@ import rocks.xmpp.core.session.XmppClient;
 import rocks.xmpp.core.session.XmppSessionConfiguration;
 import rocks.xmpp.core.session.debug.ConsoleDebugger;
 import rocks.xmpp.extensions.httpbind.BoshConnectionConfiguration;
-import rocks.xmpp.extensions.rpc.RpcException;
-import rocks.xmpp.extensions.rpc.RpcManager;
-import rocks.xmpp.extensions.rpc.model.Value;
 
 /**
  *
@@ -38,27 +41,55 @@ public class Server {
         log.info("init Server load configuration from :" + args[0]);
 
         InputStream input = new FileInputStream(args[0]);
-        
-        
 
         // load a properties file
         Properties prop = new Properties();
         prop.load(input);
-        
-        String host=prop.getProperty("sysap.host");
-        String id=prop.getProperty("sysap.id");
-        String pwd=prop.getProperty("sysap.password");
-        String domain=prop.getProperty("sysap.service.domain","busch-jaeger.de");
-        String resource=prop.getProperty("sysap.resource");
-        
-        
-        
-        int port_bosh= Integer.valueOf(prop.getProperty("sysap.port.bosh","5280"));
-        int port_tcp= Integer.valueOf(prop.getProperty("sysap.port.tcp","5222"));
-        int port_bridge= Integer.valueOf(prop.getProperty("bridge.port","8085"));
-        
-        boolean xmppDebug= Boolean.valueOf(prop.getProperty("xmpp.debug","false"));
-        
+
+        String host = prop.getProperty("sysap.host");
+        String name = prop.getProperty("sysap.loginname");
+        String pwd = prop.getProperty("sysap.password");
+        String domain = prop.getProperty("sysap.service.domain", "busch-jaeger.de");
+        String resource = prop.getProperty("sysap.resource");
+        String id=null;
+
+        InputStream in = new URL("http://"+host+"/settings.json").openStream();
+
+        try {
+            
+             JsonReader jsonReader = Json.createReader(in);
+             JsonObject settingsJS=jsonReader.readObject();
+            for (JsonValue val: settingsJS.getJsonArray("users"))
+            {
+                String jid=val.asJsonObject().getString("jid");
+                log.debug("Name:"+val.asJsonObject().getString("name"));
+                log.debug("jid:"+val.asJsonObject().getString("jid"));
+                
+                if (name.compareToIgnoreCase(val.asJsonObject().getString("name"))==0)
+                        {
+                            log.info("using jid :"+jid);
+                            id=jid.split("@")[0];
+                            log.info("ID:"+id);
+                        }
+                
+            }
+            
+            if (id==null) 
+            {
+                log.error("Cant find JID for "+name);
+                System.exit(-1);
+            }
+             
+            
+        } finally {
+            IOUtils.closeQuietly(in);
+        }
+
+        int port_bosh = Integer.valueOf(prop.getProperty("sysap.port.bosh", "5280"));
+        int port_tcp = Integer.valueOf(prop.getProperty("sysap.port.tcp", "5222"));
+        int port_bridge = Integer.valueOf(prop.getProperty("bridge.port", "8085"));
+
+        boolean xmppDebug = Boolean.valueOf(prop.getProperty("xmpp.debug", "false"));
 
         TcpConnectionConfiguration tcpConfiguration = TcpConnectionConfiguration.builder()
                 .hostname(host)
@@ -70,23 +101,18 @@ public class Server {
                 .port(5280).secure(false)
                 .path("/http-bind/")
                 .build();
-        XmppSessionConfiguration configuration=null ;
-        if (xmppDebug)
-        {
+        XmppSessionConfiguration configuration = null;
+        if (xmppDebug) {
             configuration = XmppSessionConfiguration.builder()
-                .debugger(ConsoleDebugger.class) //.authenticationMechanisms("DIGEST-MD5")
-                .build();
-        }
-        else
-        {
+                    .debugger(ConsoleDebugger.class) //.authenticationMechanisms("DIGEST-MD5")
+                    .build();
+        } else {
             configuration = XmppSessionConfiguration.builder()
-                  
-                .build();
+                    .build();
         }
-       
 
         XmppClient xmppClient = XmppClient.create(domain, configuration, tcpConfiguration, boshConfiguration);
-        
+
         new HttpServer(port_bridge, xmppClient);
 
 //    xmppClient.addInboundPresenceListener(e -> {
@@ -116,12 +142,9 @@ public class Server {
 //        xmppClient.connect();
 //        // it is not a real user name ???
 //        xmppClient.login(id, pwd, resource);
-
-   xmppClient.connect();
+        xmppClient.connect();
 //        // it is not a real user name ???
         xmppClient.login(id, pwd, resource);
     }
 
 }
-
-
