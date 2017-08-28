@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+
+</head>
+
+<body>
+
+<h1>free-home-Bridge</h1>
+
+<p>Free@home is using XMPP for homeautomatisation this bridge trys to simplyfy the communication between systems like openhab and other open source systems</p>
+
+<h2>Build</h2>
+
+<p>To build the Serve maven and a jdk 1.8 is required. 
+Just Clone and run maven</p>
+
+<p>```</p>
+
+<pre><code>git clone https://github.com/hasisunkid/free-home-Bridge.git
+cd free-home-bridge
+mvn install
+</code></pre>
+
+<p>```</p>
+
+<h2>Configuration</h2>
+
+<p>there is a template configuration file <code>config.cfg</code> to adapt it to your environment pleas edit it.</p>
+
+<h2>Installation</h2>
+
+<p>Just copy the jar file and the /lib directory to your prevered location.</p>
+
+<h2>Start</h2>
+
+<p>```</p>
+
+<pre><code>java -Xmx20m -jar FreeHomeBridge-0.1-SNAPSHOT.jar config.cfg
+</code></pre>
+
+<p>```</p>
+
+</body>
+</html>
