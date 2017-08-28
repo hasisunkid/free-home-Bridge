@@ -101,23 +101,25 @@ public class Server {
 //xmppClient.getManager(RosterManager.class).addRosterListener(e -> {
 //System.out.println(e.toString());
 //});
-        RpcManager rpcManager = xmppClient.getManager(RpcManager.class);
-        rpcManager.setRpcHandler((requester, methodName, parameters) -> {
+//        RpcManager rpcManager = xmppClient.getManager(RpcManager.class);
+//        rpcManager.setRpcHandler((requester, methodName, parameters) -> {
+//
+//            if (!parameters.isEmpty()) {
+//
+//                System.out.println("Method name:" + methodName);
+//                return Value.of("Colorado");
+//
+//            }
+//            throw new RpcException(123, "Invalid method name or parameter.");
+//        });
+//
+//        xmppClient.connect();
+//        // it is not a real user name ???
+//        xmppClient.login(id, pwd, resource);
 
-            if (!parameters.isEmpty()) {
-
-                System.out.println("Method name:" + methodName);
-                return Value.of("Colorado");
-
-            }
-            throw new RpcException(123, "Invalid method name or parameter.");
-        });
-
-        xmppClient.connect();
-        // it is not a real user name ???
+   xmppClient.connect();
+//        // it is not a real user name ???
         xmppClient.login(id, pwd, resource);
-
- 
     }
 
 }
