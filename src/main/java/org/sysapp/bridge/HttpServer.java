@@ -11,6 +11,7 @@ import java.io.StringReader;
 import java.util.List;
 import java.util.Map;
 import javax.json.Json;
+import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -30,6 +31,9 @@ public class HttpServer extends NanoHTTPD {
     private static org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(HttpServer.class);
     private XmppClient xmppClient;
     private RpcManager rpcManager;
+    private static long requestCacheTime=0;
+    private JsonObject statusJS;
+    private static long maxCacheTime=120000;
 
     public HttpServer(int port, XmppClient xmppClient) throws IOException {
         super(port);
@@ -51,9 +55,31 @@ public class HttpServer extends NanoHTTPD {
         for (String entr : parms.keySet()) {
             log.debug("Key:" + entr);
         }
-
-        if (uri.endsWith("getDevices")) {
-            return newFixedLengthResponse(Response.Status.OK, "application/json", this.getDevices());
+        if (uri.endsWith("getSingleValue"))
+        {
+            
+            String id = parms.get("id").get(0);
+            String ch = parms.get("ch").get(0);
+            String port = parms.get("port").get(0);
+            String value;
+            try
+            {
+            JsonObject idJS=this.getDevices().getJsonObject(id);
+            JsonObject chJS=idJS.getJsonObject(ch);
+            value=chJS.getString(port);
+            }
+            catch (Exception e)
+            {
+                log.error("Value Problem",e);
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/txt","0");
+            }
+                
+            return newFixedLengthResponse(Response.Status.OK, "application/txt", value);
+            
+        }
+        else if  (uri.endsWith("getDevices")) {
+            
+            return newFixedLengthResponse(Response.Status.OK, "application/json", this.getDevices().toString());
         } else if (uri.endsWith("setDataPoint")) {
             String id = parms.get("id").get(0);
             String ch = parms.get("ch").get(0);
@@ -84,9 +110,18 @@ public class HttpServer extends NanoHTTPD {
 
     }
 
-    private String getDevices() {
+    private JsonObject getDevices() {
         
-
+        if ((System.currentTimeMillis()-requestCacheTime)<maxCacheTime)
+            {
+                log.info("Read from Cahche ");
+                return statusJS ; 
+            }
+            else
+            {
+                requestCacheTime=System.currentTimeMillis();
+            }
+        
         JsonObjectBuilder resultJS = Json.createObjectBuilder();
         try {
             Value response = rpcManager.call(Jid.of("mrha@busch-jaeger.de/rpc"), "RemoteInterface.getAll", Value.of("de"), Value.of(4), Value.of(0), Value.of(0)).getResult();
@@ -141,8 +176,8 @@ public class HttpServer extends NanoHTTPD {
         } catch (Exception e) {
             log.error(e);
         }
-        
-        return resultJS.build().toString();
+        statusJS=resultJS.build();
+        return statusJS ;
     }
 
 }
