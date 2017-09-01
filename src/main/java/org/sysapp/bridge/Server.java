@@ -17,6 +17,7 @@ import javax.json.JsonValue;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.jdom2.JDOMException;
 import rocks.xmpp.core.XmppException;
 import rocks.xmpp.core.session.TcpConnectionConfiguration;
@@ -37,15 +38,16 @@ public class Server {
     private static Logger log = Logger.getLogger("Server");
 
     public static void main(String[] args) throws XmppException, JDOMException, IOException {
-        BasicConfigurator.configure();
-        log.info("init Server load configuration from :" + args[0]);
-
         InputStream input = new FileInputStream(args[0]);
+       
+
+        
 
         // load a properties file
         Properties prop = new Properties();
         prop.load(input);
-
+         PropertyConfigurator.configure(prop);
+        log.info("init Server load configuration from :" + args[0]);
         String host = prop.getProperty("sysap.host");
         String name = prop.getProperty("sysap.loginname");
         String pwd = prop.getProperty("sysap.password");
