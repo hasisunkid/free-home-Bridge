@@ -1,0 +1,14 @@
+2017-09-12 16:39:56,310 INFO  [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: GET '/setDataPoint'  from localhost
+2017-09-12 16:39:56,313 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Key:ch
+2017-09-12 16:39:56,314 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Key:port
+2017-09-12 16:39:56,314 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Key:id
+2017-09-12 16:39:56,314 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Key:value
+2017-09-12 16:39:56,314 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: ABB2DF0F1851/ch0003/idp0001set 0
+2017-09-12 16:39:56,391 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Result:
+2017-09-12 16:39:56,392 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: 
+2017-09-12 16:39:59,924 INFO  [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: GET '/setDataPoint'  from localhost
+2017-09-12 16:39:59,925 DEBUG [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: Key:ch
+2017-09-12 16:39:59,926 DEBUG [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: Key:port
+2017-09-12 16:39:59,927 DEBUG [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: Key:id
+2017-09-12 16:39:59,928 DEBUG [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: Key:value
+2017-09-12 16:39:59,929 DEBUG [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: ABB2DF0F1851/ch0003/idp0001set 1

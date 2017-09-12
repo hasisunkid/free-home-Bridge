@@ -1,0 +1,9 @@
+2017-09-12 17:21:21,482 INFO  [NanoHttpd Request Processor (#1)] org.sysapp.bridge.HttpServer: GET '/shutt'  from localhost
+2017-09-12 17:21:21,484 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.HttpServer: Key:set
+2017-09-12 17:21:21,484 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.HttpServer: Key:ch
+2017-09-12 17:21:21,484 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.HttpServer: Key:id
+2017-09-12 17:21:21,485 WARN  [NanoHttpd Request Processor (#1)] org.sysapp.bridge.HttpServer: /shutt unknowen command
+2017-09-12 17:21:54,252 INFO  [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: GET '/shut'  from localhost
+2017-09-12 17:21:54,253 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Key:set
+2017-09-12 17:21:54,253 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Key:ch
+2017-09-12 17:21:54,253 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Key:id

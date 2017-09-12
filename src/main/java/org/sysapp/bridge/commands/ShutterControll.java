@@ -17,7 +17,11 @@ import org.sysapp.bridge.FreeHomeXMPBasicCommands;
 public class ShutterControll implements FreeHomeCommandAbstractionInterface {
 
     private static org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(ShutterControll.class);
-    
+    private final static String S_PO_UP_DOWN="idp0000" ;
+    private final static String S_PO_STOP="idp0001" ;
+    private int status = 200;
+    private String error="no Errors";
+    private String result="";
     public ShutterControll()
     {
      
@@ -36,22 +40,43 @@ public class ShutterControll implements FreeHomeCommandAbstractionInterface {
 
     @Override
     public FreeHomeCommandAbstractionInterface execute(Map<String, List<String>> parms, FreeHomeXMPBasicCommands basicCommands) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         String id = parms.get("id").get(0);
+        String ch = parms.get("ch").get(0);
+        // get Parameter;
+        if (parms.containsKey("set"))
+        {
+             String get= parms.get("set").get(0);
+             if (get.compareToIgnoreCase("up")==0)
+             {
+                  basicCommands.setDataPoint(id, ch, S_PO_UP_DOWN, "0");
+             }
+             else if (get.compareToIgnoreCase("down")==0)
+             {
+                  basicCommands.setDataPoint(id, ch, S_PO_UP_DOWN, "1");
+             }
+             
+             else if (get.compareToIgnoreCase("stop")==0)
+             {
+                  basicCommands.setDataPoint(id, ch, S_PO_STOP, "1");
+             }
+             
+        }
+        return this;
     }
 
     @Override
     public int getStatus() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return status;
     }
 
     @Override
     public String getResponse() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return result;
     }
 
     @Override
     public String getErrorMessage() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return error;
     }
     
 }
