@@ -5,6 +5,7 @@
  */
 package org.sysapp.bridge;
 
+import fi.iki.elonen.NanoHTTPD;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -115,7 +116,10 @@ public class Server {
 
         XmppClient xmppClient = XmppClient.create(domain, configuration, tcpConfiguration, boshConfiguration);
 
-        new HttpServer(port_bridge, xmppClient);
+        HttpServer server=new HttpServer(port_bridge, xmppClient);
+        server.addCommand("org.sysapp.bridge.commands.HeatControll");
+        server.addCommand("org.sysapp.bridge.commands.ShutterControll");
+        server.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
 
 //    xmppClient.addInboundPresenceListener(e -> {
 //        System.out.println(e.getPresence().getStatus());

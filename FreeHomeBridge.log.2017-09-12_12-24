@@ -1,0 +1,18 @@
+2017-09-12 12:24:09,405 INFO  [main] Server: init Server load configuration from :/home/enrico/Development/free-home-Bridge/config.cfg_
+2017-09-12 12:24:09,745 DEBUG [main] Server: Name:U. Wörner
+2017-09-12 12:24:09,746 DEBUG [main] Server: jid:installer@busch-jaeger.de
+2017-09-12 12:24:09,746 DEBUG [main] Server: Name:WE08
+2017-09-12 12:24:09,746 DEBUG [main] Server: jid:d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2017-09-12 12:24:09,747 INFO  [main] Server: using jid :d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2017-09-12 12:24:09,747 INFO  [main] Server: ID:d7198d18-9416-4697-8ff3-9a1f47daa7f5
+2017-09-12 12:24:12,809 INFO  [main] org.sysapp.bridge.HttpServer: Running! http://localhost:8085
+2017-09-12 12:24:12,816 INFO  [main] org.sysapp.bridge.commands.HeatControll: HeatControll command enabled
+2017-09-12 12:24:12,817 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=room  returns room temperature
+2017-09-12 12:24:12,818 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=setting  returns current setted temperature
+2017-09-12 12:24:12,819 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=state returns ON OFF
+2017-09-12 12:24:12,820 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2017-09-12 12:24:12,821 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=[ON|OFF] switche ON OFF
+2017-09-12 12:24:12,821 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=temp&value=[degr] adjust heat tempreture value float
+2017-09-12 12:24:12,821 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2017-09-12 12:24:12,822 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2017-09-12 12:24:12,823 INFO  [main] org.sysapp.bridge.commands.ShutterControll: http://...../shut?id=XXXXX&ch=xxxxx&set=[UP|DOWN|STOP] 

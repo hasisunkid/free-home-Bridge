@@ -1,0 +1,7 @@
+2017-09-12 11:22:45,962 INFO  [main] Server: init Server load configuration from :/home/enrico/Development/free-home-Bridge/config.cfg_
+2017-09-12 11:22:46,606 DEBUG [main] Server: Name:U. Wörner
+2017-09-12 11:22:46,606 DEBUG [main] Server: jid:installer@busch-jaeger.de
+2017-09-12 11:22:46,607 DEBUG [main] Server: Name:WE08
+2017-09-12 11:22:46,607 DEBUG [main] Server: jid:d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2017-09-12 11:22:46,607 INFO  [main] Server: using jid :d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2017-09-12 11:22:46,608 INFO  [main] Server: ID:d7198d18-9416-4697-8ff3-9a1f47daa7f5
