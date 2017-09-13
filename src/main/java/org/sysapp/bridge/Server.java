@@ -119,6 +119,7 @@ public class Server {
         HttpServer server=new HttpServer(port_bridge, xmppClient);
         server.addCommand("org.sysapp.bridge.commands.HeatControll");
         server.addCommand("org.sysapp.bridge.commands.ShutterControll");
+        server.registerAliastable(prop);
         server.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
 
 //    xmppClient.addInboundPresenceListener(e -> {

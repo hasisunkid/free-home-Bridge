@@ -15,7 +15,7 @@ import java.util.Map;
 public interface FreeHomeCommandAbstractionInterface {
     
     public String getName();
-    public FreeHomeCommandAbstractionInterface execute(Map<String, List<String>> parms,FreeHomeXMPBasicCommands basicCommands);
+    public FreeHomeCommandAbstractionInterface execute(Map<String, List<String>> parms, FreeHomeXMPBasicCommands basicCommands);
     public int getStatus();
     public String getResponse();
     public String getErrorMessage();

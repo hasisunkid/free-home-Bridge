@@ -1,2 +1,6 @@
+/home/enrico/Development/free-home-Bridge/src/main/java/org/sysapp/bridge/commands/HeatControll.java
 /home/enrico/Development/free-home-Bridge/src/main/java/org/sysapp/bridge/Server.java
+/home/enrico/Development/free-home-Bridge/src/main/java/org/sysapp/bridge/FreeHomeXMPBasicCommands.java
+/home/enrico/Development/free-home-Bridge/src/main/java/org/sysapp/bridge/commands/ShutterControll.java
+/home/enrico/Development/free-home-Bridge/src/main/java/org/sysapp/bridge/FreeHomeCommandAbstractionInterface.java
 /home/enrico/Development/free-home-Bridge/src/main/java/org/sysapp/bridge/HttpServer.java

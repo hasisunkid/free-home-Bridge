@@ -12,4 +12,5 @@ package org.sysapp.bridge;
 public interface FreeHomeXMPBasicCommands {
      public void setDataPoint(String serialNum, String channel, String port, String value) ;
      public String getValue(String id, String ch, String port,boolean useCache) ;
+     public String[] resolveDeviceAlias(String alias);
 }

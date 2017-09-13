@@ -52,9 +52,19 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
 
     @Override
     public FreeHomeCommandAbstractionInterface execute(Map<String, List<String>> parms, FreeHomeXMPBasicCommands basicCommands) {
-        
-        String id = parms.get("id").get(0);
-        String ch = parms.get("ch").get(0);
+         String id  ;
+         String ch;
+        if (parms.containsKey("alias"))
+        {
+            String path[] = basicCommands.resolveDeviceAlias(parms.get("alias").get(0));
+            id = path [0];
+            ch = path [1];
+        }
+        else
+        {
+         id = parms.get("id").get(0);
+         ch  = parms.get("ch").get(0);
+        }
         // get Parameter;
         if (parms.containsKey("get"))
         {

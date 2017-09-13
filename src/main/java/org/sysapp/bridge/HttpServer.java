@@ -11,6 +11,7 @@ import java.io.StringReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
@@ -28,7 +29,7 @@ import rocks.xmpp.extensions.rpc.model.Value;
  * @author eobs
  */
 public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
-    
+
     private static org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(HttpServer.class);
     private XmppClient xmppClient;
     private RpcManager rpcManager;
@@ -36,7 +37,8 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
     private JsonObject statusJS;
     private static long maxCacheTime = 120000;
     private HashMap<String, FreeHomeCommandAbstractionInterface> commands;
-    
+    private HashMap<String, String[]> alias;
+
     public HttpServer(int port, XmppClient xmppClient) throws IOException {
         super(port);
         this.xmppClient = xmppClient;
@@ -45,72 +47,63 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
         rpcManager = xmppClient.getManager(RpcManager.class);
         commands = new HashMap<String, FreeHomeCommandAbstractionInterface>();
     }
-    
+
     @Override
     public Response serve(IHTTPSession session) {
-        
+
         Method method = session.getMethod();
         String uri = session.getUri();
         log.info(method + " '" + uri + "'  from " + session.getRemoteHostName());
-        
+
         Map<String, List<String>> parms = session.getParameters();
-        
+
         for (String entr : parms.keySet()) {
             log.debug("Key:" + entr);
         }
         if (uri.endsWith("getSingleValue")) {
-            
+
             String id = parms.get("id").get(0);
             String ch = parms.get("ch").get(0);
             String port = parms.get("port").get(0);
             String value = getValue(id, ch, port, true);
-            
+
             if (value == null) {
-                
+
                 return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/txt", "0");
             }
-            
+
             return newFixedLengthResponse(Response.Status.OK, "application/txt", value);
-            
+
         } else if (uri.endsWith("getDevices")) {
-            
+
             return newFixedLengthResponse(Response.Status.OK, "application/json", this.getDevices(true).toString());
         } else if (uri.endsWith("setDataPoint")) {
             String id = parms.get("id").get(0);
             String ch = parms.get("ch").get(0);
             String port = parms.get("port").get(0);
             String value = parms.get("value").get(0);
-            
+
             setDataPoint(id, ch, port, value);
-            
+
             return newFixedLengthResponse("OK");
-        }
-        
-        else
-        {
-            FreeHomeCommandAbstractionInterface command=commands.get(uri);
-            if (command!=null)
-            {
-                if (command.execute(parms, this).getStatus()==200)
-                {
-                     return newFixedLengthResponse(command.getResponse());
-                }
-                else
-                {
+        } else {
+            FreeHomeCommandAbstractionInterface command = commands.get(uri);
+            if (command != null) {
+                if (command.execute(parms, this).getStatus() == 200) {
+                    return newFixedLengthResponse(command.getResponse());
+                } else {
                     return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/txt", command.getErrorMessage());
                 }
-                
+
+            } else {
+                log.warn(uri + " unknowen command");
             }
-            else
-            {
-                log.warn(uri+" unknowen command");
-            }
-            
+
         }
-        
+
         return newFixedLengthResponse("OK");
     }
-    
+
     public String getValue(String id, String ch, String port, boolean useCache) {
         String value = null;
         try {
@@ -119,13 +112,13 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
             value = chJS.getString(port);
         } catch (Exception e) {
             log.error("Value Problem", e);
-            
+
         }
         return value;
     }
-    
+
     public void setDataPoint(String serialNum, String channel, String port, String value) {
-        
+
         try {
             String path = serialNum + "/" + channel + "/" + port;
             log.debug(path + "set " + value);
@@ -137,31 +130,31 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
         } catch (Exception e) {
             log.error(e);
         }
-        
+
     }
-    
+
     private JsonObject getDevices(boolean useCahce) {
-        
+
         if (((System.currentTimeMillis() - requestCacheTime) < maxCacheTime) && (useCahce)) {
             log.info("Read from Cahche ");
-            return statusJS;            
+            return statusJS;
         } else {
             requestCacheTime = System.currentTimeMillis();
         }
-        
+
         JsonObjectBuilder resultJS = Json.createObjectBuilder();
         try {
             Value response = rpcManager.call(Jid.of("mrha@busch-jaeger.de/rpc"), "RemoteInterface.getAll", Value.of("de"), Value.of(4), Value.of(0), Value.of(0)).getResult();
             //log.debug(response.getAsString()); // Colorado
             Document doc = new SAXBuilder().build(new InputSource(new StringReader(response.getAsString())));
             Element dev = doc.getRootElement().getChild("devices");
-            
+
             for (Element el : dev.getChildren()) {
                 log.debug("Dev :" + el.getName() + " id :" + el.getAttributeValue("serialNumber"));
-                
+
                 JsonObjectBuilder device = null;
                 for (Element cl : el.getChildren("attribute")) {
-                    
+
                     if (cl.getAttribute("name").getValue().compareToIgnoreCase("displayName") == 0) {
                         log.debug("\tDevice Name " + cl.getText());
                         device = Json.createObjectBuilder();
@@ -169,27 +162,27 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
                         device.add("id", el.getAttributeValue("serialNumber"));
                     }
                 }
-                
+
                 if (device != null) {
-                    
+
                     Element channels = el.getChild("channels");
                     if (channels != null) {
                         for (Element ch : channels.getChildren()) {
                             log.debug("\t\tChanel ID: " + ch.getAttributeValue("i"));
                             JsonObjectBuilder channelJS = Json.createObjectBuilder();
-                            
+
                             for (Element outputs : ch.getChild("outputs").getChildren()) {
                                 channelJS.add(outputs.getAttribute("i").getValue(), outputs.getChildText("value"));
                                 log.debug("\t\t\t DataPoint :" + outputs.getAttribute("i") + "[" + outputs.getChildText("value") + "]");
-                                
+
                             }
-                            
+
                             for (Element outputs : ch.getChild("inputs").getChildren()) {
                                 channelJS.add(outputs.getAttribute("i").getValue(), outputs.getChildText("value"));
                                 log.debug("\t\t\t DataPoint :" + outputs.getAttribute("i") + "[" + outputs.getChildText("value") + "]");
-                                
+
                             }
-                            
+
                             device.add(ch.getAttributeValue("i"), channelJS);
                         }
                     }
@@ -206,19 +199,42 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
         statusJS = resultJS.build();
         return statusJS;
     }
-    
+
     public void addCommand(String className) {
         try {
             Class commandClass = Class.forName(className);
-            FreeHomeCommandAbstractionInterface commandInst=(FreeHomeCommandAbstractionInterface) commandClass.newInstance();
-            this.commands.put("/"+commandInst.getName(), commandInst);
-         
-        }
-        catch (Exception ex) {
+            FreeHomeCommandAbstractionInterface commandInst = (FreeHomeCommandAbstractionInterface) commandClass.newInstance();
+            this.commands.put("/" + commandInst.getName(), commandInst);
+
+        } catch (Exception ex) {
             log.error("Cant use command " + className);
             log.error(ex);
         }
-        
+
     }
-    
+
+    @Override
+    public String[] resolveDeviceAlias(String alias) {
+        String path[] = this.alias.get(alias);
+        log.info("resolve "+alias+" to :"+path[0]+"/"+path[1]);
+        return path;
+    }
+
+    public void registerAliastable(Properties prop) {
+        this.alias=new HashMap<String,String[]>();
+        for (Map.Entry<Object, Object> e : prop.entrySet()) {
+            String key = (String) e.getKey();
+            if (key.startsWith("alias"))
+            {
+                String aliasName =key.split("\\.")[1];
+                 
+                 String value = (String) e.getValue();
+                 this.alias.put(aliasName, value.split("/"));
+                 log.info("Alias "+aliasName+" = "+value);
+            }
+           
+
+        }
+    }
+
 }
