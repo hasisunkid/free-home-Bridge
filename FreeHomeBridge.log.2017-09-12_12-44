@@ -1,7 +1,0 @@
-2017-09-12 12:44:02,028 INFO  [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: GET '/heat'  from localhost
-2017-09-12 12:44:02,030 DEBUG [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: Key:set
-2017-09-12 12:44:02,030 DEBUG [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: Key:ch
-2017-09-12 12:44:02,030 DEBUG [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: Key:id
-2017-09-12 12:44:02,030 DEBUG [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: off/ch0000/idp0011set 0
-2017-09-12 12:44:02,100 DEBUG [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: Result:
-2017-09-12 12:44:02,100 DEBUG [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: 

@@ -1,8 +1,0 @@
-2017-09-12 17:22:01,744 INFO  [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: GET '/shut'  from localhost
-2017-09-12 17:22:01,746 DEBUG [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: Key:set
-2017-09-12 17:22:01,746 DEBUG [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: Key:ch
-2017-09-12 17:22:01,746 DEBUG [NanoHttpd Request Processor (#3)] org.sysapp.bridge.HttpServer: Key:id
-2017-09-12 17:22:07,208 INFO  [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: GET '/shut'  from localhost
-2017-09-12 17:22:07,209 DEBUG [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: Key:set
-2017-09-12 17:22:07,209 DEBUG [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: Key:ch
-2017-09-12 17:22:07,209 DEBUG [NanoHttpd Request Processor (#4)] org.sysapp.bridge.HttpServer: Key:id
