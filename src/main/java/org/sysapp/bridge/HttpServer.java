@@ -210,14 +210,28 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
                     resultJS.add(el.getAttributeValue("serialNumber"), device);
                 }
             }
+            /**
             doc = null;
             dev = null;
             response = null;
             System.gc();
+            **/
         } catch (Exception e) {
             log.error(e);
         }
-        statusJS = resultJS.build();
+        
+        JsonObject result=resultJS.build();
+        if (result!=null)
+        {
+            log.debug("Cache is valid ");
+            statusJS= result;
+        }
+        else 
+        {
+            log.warn("Cahce not valid using old one");
+        }
+        
+        
         return statusJS;
     }
 
