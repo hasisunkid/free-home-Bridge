@@ -51,24 +51,24 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
     }
 
     @Override
-    public FreeHomeCommandAbstractionInterface execute(Map<String, List<String>> parms, FreeHomeXMPBasicCommands basicCommands) {
+    public FreeHomeCommandAbstractionInterface execute(Map<String, String> parms, FreeHomeXMPBasicCommands basicCommands) {
          String id  ;
          String ch;
         if (parms.containsKey("alias"))
         {
-            String path[] = basicCommands.resolveDeviceAlias(parms.get("alias").get(0));
+            String path[] = basicCommands.resolveDeviceAlias(parms.get("alias"));
             id = path [0];
             ch = path [1];
         }
         else
         {
-         id = parms.get("id").get(0);
-         ch  = parms.get("ch").get(0);
+         id = parms.get("id");
+         ch  = parms.get("ch");
         }
         // get Parameter;
         if (parms.containsKey("get"))
         {
-             String get= parms.get("get").get(0);
+             String get= parms.get("get");
              if (get.compareToIgnoreCase("room")==0)
              {
                  this.result=basicCommands.getValue(id, ch, R_PO_R_TEMP, true);
@@ -94,7 +94,7 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
         }
         //set Heat Values
         else if (parms.containsKey("set"))
-        { String set= parms.get("set").get(0);
+        { String set= parms.get("set");
             if (set.equalsIgnoreCase("on"))
             {
               // turn heat on
@@ -109,7 +109,7 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
                 // first switch heat on
                 basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "1");
                 
-                float new_tmp=Float.parseFloat(parms.get("value").get(0));
+                float new_tmp=Float.parseFloat(parms.get("value"));
                 if (new_tmp<0 ) new_tmp=0;
                 if (new_tmp>35) new_tmp=35;
                 float current_tmp=Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_TEMP, false));

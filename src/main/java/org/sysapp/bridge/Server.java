@@ -5,6 +5,7 @@
  */
 package org.sysapp.bridge;
 
+
 import fi.iki.elonen.NanoHTTPD;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -54,6 +55,7 @@ public class Server {
         String pwd = prop.getProperty("sysap.password");
         String domain = prop.getProperty("sysap.service.domain", "busch-jaeger.de");
         String resource = prop.getProperty("sysap.resource");
+        int cacheRetention=Integer.valueOf(prop.getProperty("bridge.cacheretention", "12000"));
         String id=null;
 
         InputStream in = new URL("http://"+host+"/settings.json").openStream();
@@ -116,11 +118,13 @@ public class Server {
 
         XmppClient xmppClient = XmppClient.create(domain, configuration, tcpConfiguration, boshConfiguration);
 
-        HttpServer server=new HttpServer(port_bridge, xmppClient);
+        HttpServer server=new HttpServer(port_bridge, xmppClient,cacheRetention);
         server.addCommand("org.sysapp.bridge.commands.HeatControll");
         server.addCommand("org.sysapp.bridge.commands.ShutterControll");
         server.registerAliastable(prop);
-        server.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
+        
+        
+         server.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
 
 //    xmppClient.addInboundPresenceListener(e -> {
 //        System.out.println(e.getPresence().getStatus());

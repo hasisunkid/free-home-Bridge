@@ -1,0 +1,150 @@
+2017-12-26 18:17:22,910 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Key:get
+2017-12-26 18:17:22,912 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Key:alias
+2017-12-26 18:17:22,912 INFO  [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: resolve wohn_heat to :ABB700C78383/ch0000
+2017-12-26 18:17:25,137 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB700000000
+2017-12-26 18:17:25,138 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB2740A1851
+2017-12-26 18:17:25,139 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB652835A56
+2017-12-26 18:17:25,139 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 	Device Name ABB-free@homeTouch 7
+2017-12-26 18:17:25,140 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0010
+2017-12-26 18:17:25,140 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,140 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0011
+2017-12-26 18:17:25,141 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,141 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0012
+2017-12-26 18:17:25,141 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,141 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0013
+2017-12-26 18:17:25,141 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,141 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0014
+2017-12-26 18:17:25,142 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,142 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0015
+2017-12-26 18:17:25,142 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,142 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0016
+2017-12-26 18:17:25,143 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,143 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch001C
+2017-12-26 18:17:25,143 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,143 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch001D
+2017-12-26 18:17:25,144 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0000"][2017-12-26]
+2017-12-26 18:17:25,144 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0001"][17:39:01]
+2017-12-26 18:17:25,144 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0002"][1]
+2017-12-26 18:17:25,144 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB700C78A20
+2017-12-26 18:17:25,144 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 	Device Name Wohnen
+2017-12-26 18:17:25,144 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0000
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][93]
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0006"][21]
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0007"][0]
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0009"][33]
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0010"][19.29]
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0011"][1]
+2017-12-26 18:17:25,145 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0000"][93]
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0016"][1]
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB2DF0F1851
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB700C78383
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 	Device Name Küche, Essen
+2017-12-26 18:17:25,146 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0000
+2017-12-26 18:17:25,147 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][100]
+2017-12-26 18:17:25,147 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0006"][23]
+2017-12-26 18:17:25,147 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0007"][2]
+2017-12-26 18:17:25,147 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2017-12-26 18:17:25,147 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0009"][33]
+2017-12-26 18:17:25,147 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2017-12-26 18:17:25,147 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2017-12-26 18:17:25,147 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0010"][20.12]
+2017-12-26 18:17:25,147 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0011"][1]
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0000"][100]
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0016"][1]
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB2E70F1851
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB286561751
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB700C78A09
+2017-12-26 18:17:25,148 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 	Device Name Schlafen
+2017-12-26 18:17:25,149 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0000
+2017-12-26 18:17:25,149 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,149 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0006"][16]
+2017-12-26 18:17:25,149 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0007"][-2]
+2017-12-26 18:17:25,149 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2017-12-26 18:17:25,149 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0009"][68]
+2017-12-26 18:17:25,149 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0010"][17.53]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0011"][0]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0016"][1]
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB2970A1851
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB700C7AEC3
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB700C78A0D
+2017-12-26 18:17:25,150 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 	Device Name Flur
+2017-12-26 18:17:25,151 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0000
+2017-12-26 18:17:25,151 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,152 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0006"][18.5]
+2017-12-26 18:17:25,152 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0007"][0.5]
+2017-12-26 18:17:25,152 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2017-12-26 18:17:25,152 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0009"][68]
+2017-12-26 18:17:25,152 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0010"][19.1]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0011"][0]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0016"][1]
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB24A0A1851
+2017-12-26 18:17:25,153 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB700C785E4
+2017-12-26 18:17:25,154 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 	Device Name Arbeit
+2017-12-26 18:17:25,154 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0000
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0006"][16.5]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0007"][-1.5]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0009"][68]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0010"][19.38]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0011"][0]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2017-12-26 18:17:25,155 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2017-12-26 18:17:25,156 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2017-12-26 18:17:25,156 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2017-12-26 18:17:25,156 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0016"][1]
+2017-12-26 18:17:25,156 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :ABB700C78575
+2017-12-26 18:17:25,156 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 	Device Name Bad
+2017-12-26 18:17:25,156 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 		Chanel ID: ch0000
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0000"][90]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0006"][22]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0007"][1]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0009"][33]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0010"][20.9]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0011"][1]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2017-12-26 18:17:25,157 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0000"][90]
+2017-12-26 18:17:25,158 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2017-12-26 18:17:25,158 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2017-12-26 18:17:25,158 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2017-12-26 18:17:25,158 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2017-12-26 18:17:25,158 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: 			 DataPoint :[Attribute: i="idp0016"][1]
+2017-12-26 18:17:25,158 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :FFFF00000002
+2017-12-26 18:17:25,158 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :FFFF00000003
+2017-12-26 18:17:25,158 DEBUG [NanoHttpd Request Processor (#8)] org.sysapp.bridge.HttpServer: Dev :device id :FFFF00000004

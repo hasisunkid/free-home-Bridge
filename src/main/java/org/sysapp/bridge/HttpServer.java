@@ -34,13 +34,27 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
     private XmppClient xmppClient;
     private RpcManager rpcManager;
     private static long requestCacheTime = 0;
-    private JsonObject statusJS;
+    private static JsonObject statusJS;
     private static long maxCacheTime = 120000;
     private HashMap<String, FreeHomeCommandAbstractionInterface> commands;
     private HashMap<String, String[]> alias;
+    private boolean useCache=true;
 
-    public HttpServer(int port, XmppClient xmppClient) throws IOException {
+    public HttpServer(int port, XmppClient xmppClient,long cahceRetetnin) throws IOException {
         super(port);
+        
+        if (cahceRetetnin==0)
+        {
+            log.info("Disable sysap request Cache");
+            this.useCache=false;
+        }
+        else
+        {
+            log.info("Enable sysap request Cache retention time is "+cahceRetetnin);
+            this.useCache=true;
+            maxCacheTime=(long) cahceRetetnin;
+        }
+        
         this.xmppClient = xmppClient;
         //start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
         log.info("Running! http://localhost:" + port);
@@ -53,18 +67,18 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
 
         Method method = session.getMethod();
         String uri = session.getUri();
-        log.info(method + " '" + uri + "'  from " + session.getRemoteHostName());
+        //log.info(method + " '" + uri + "'  from " + session.getRemoteHostName());
 
-        Map<String, List<String>> parms = session.getParameters();
-
+        Map<String, String> parms = session.getParms();
+        
         for (String entr : parms.keySet()) {
             log.debug("Key:" + entr);
         }
         if (uri.endsWith("getSingleValue")) {
 
-            String id = parms.get("id").get(0);
-            String ch = parms.get("ch").get(0);
-            String port = parms.get("port").get(0);
+            String id = parms.get("id") ;
+            String ch = parms.get("ch") ;
+            String port = parms.get("port") ;
             String value = getValue(id, ch, port, true);
 
             if (value == null) {
@@ -78,10 +92,10 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
 
             return newFixedLengthResponse(Response.Status.OK, "application/json", this.getDevices(true).toString());
         } else if (uri.endsWith("setDataPoint")) {
-            String id = parms.get("id").get(0);
-            String ch = parms.get("ch").get(0);
-            String port = parms.get("port").get(0);
-            String value = parms.get("value").get(0);
+            String id = parms.get("id") ;
+            String ch = parms.get("ch") ;
+            String port = parms.get("port") ;
+            String value = parms.get("value") ;
 
             setDataPoint(id, ch, port, value);
 

@@ -35,20 +35,20 @@ public class ShutterControll implements FreeHomeCommandAbstractionInterface {
     }
 
     @Override
-    public FreeHomeCommandAbstractionInterface execute(Map<String, List<String>> parms, FreeHomeXMPBasicCommands basicCommands) {
+    public FreeHomeCommandAbstractionInterface execute(Map<String, String> parms, FreeHomeXMPBasicCommands basicCommands) {
         String id;
         String ch;
         if (parms.containsKey("alias")) {
-            String path[] = basicCommands.resolveDeviceAlias(parms.get("alias").get(0));
+            String path[] = basicCommands.resolveDeviceAlias(parms.get("alias"));
             id = path[0];
             ch = path[1];
         } else {
-            id = parms.get("id").get(0);
-            ch = parms.get("ch").get(0);
+            id = parms.get("id");
+            ch = parms.get("ch");
         }
         // get Parameter;
         if (parms.containsKey("set")) {
-            String get = parms.get("set").get(0);
+            String get = parms.get("set");
             if (get.compareToIgnoreCase("up") == 0) {
                 basicCommands.setDataPoint(id, ch, S_PO_UP_DOWN, "0");
             } else if (get.compareToIgnoreCase("down") == 0) {
