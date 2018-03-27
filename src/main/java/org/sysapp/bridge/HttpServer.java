@@ -121,10 +121,17 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
     public String getValue(String id, String ch, String port, boolean useCache) {
         String value = null;
         try {
+            
             JsonObject idJS = this.getDevices(useCache).getJsonObject(id);
             JsonObject chJS = idJS.getJsonObject(ch);
             value = chJS.getString(port);
         } catch (Exception e) {
+            log.debug("Caller ID:"+id+" Channel: "+ch+" Port:"+port);
+            log.debug("===========================");
+            log.debug(statusJS);
+            
+            log.debug("===========================");
+            
             log.error("Value Problem", e);
 
         }
