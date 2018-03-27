@@ -119,9 +119,14 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
     }
 
     public String getValue(String id, String ch, String port, boolean useCache) {
-        String value = null;
-        try {
+        
+        //String value = null;
+        //try {
             
+           cacheRefresh();
+           return  ValueCache.GetInstance().getValue(id, ch, port);
+            
+            /**
             JsonObject idJS = this.getDevices(useCache).getJsonObject(id);
             JsonObject chJS = idJS.getJsonObject(ch);
             value = chJS.getString(port);
@@ -130,12 +135,15 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
             log.debug("===========================");
             log.debug(statusJS);
             
-            log.debug("===========================");
+            log.debug("===========================");J
+            * 
             
             log.error("Value Problem", e);
 
         }
+       
         return value;
+        *  * **/
     }
 
     public void setDataPoint(String serialNum, String channel, String port, String value) {
@@ -154,6 +162,65 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
 
     }
 
+    private void cacheRefresh()
+    {
+        
+        if (((System.currentTimeMillis() - requestCacheTime) < maxCacheTime) && (this.useCache)) 
+        {
+            log.debug("Read from Cahche ");
+             
+        } 
+        else {
+            log.debug("Reload Cache");
+            
+            
+            try {
+            Value response = rpcManager.call(Jid.of("mrha@busch-jaeger.de/rpc"), "RemoteInterface.getAll", Value.of("de"), Value.of(4), Value.of(0), Value.of(0)).getResult();
+            //log.debug(response.getAsString()); // Colorado
+            Document doc = new SAXBuilder().build(new InputSource(new StringReader(response.getAsString())));
+            Element dev = doc.getRootElement().getChild("devices");
+            ValueCache vc = ValueCache.GetInstance();
+            vc.clear();
+            for (Element el : dev.getChildren()) {
+                log.debug("Dev :" + el.getName() + " id :" + el.getAttributeValue("serialNumber"));
+                String id=el.getAttributeValue("serialNumber");
+                 
+  
+
+                    Element channels = el.getChild("channels");
+                    if (channels != null) {
+                        for (Element ch : channels.getChildren()) {
+                            log.debug("\t\tChanel ID: " + ch.getAttributeValue("i"));
+                            String chID=ch.getAttributeValue("i");
+
+                            for (Element outputs : ch.getChild("outputs").getChildren()) {
+                                //channelJS.add(outputs.getAttribute("i").getValue(), outputs.getChildText("value"));
+                                log.debug("\t\t\t DataPoint :" + outputs.getAttribute("i") + "[" + outputs.getChildText("value") + "]");
+                                vc.addValue(id, chID,outputs.getAttribute("i").getValue(),outputs.getChildText("value"));
+                            }
+
+                            for (Element outputs : ch.getChild("inputs").getChildren()) {
+                                //channelJS.add(outputs.getAttribute("i").getValue(), outputs.getChildText("value"));
+                                log.debug("\t\t\t DataPoint :" + outputs.getAttribute("i") + "[" + outputs.getChildText("value") + "]");
+                                vc.addValue(id, chID,outputs.getAttribute("i").getValue(),outputs.getChildText("value"));
+                            }
+
+                             
+                        }
+                    }
+                    
+                }
+            
+            
+            
+            requestCacheTime = System.currentTimeMillis();
+        }
+               catch (Exception e) {
+            log.error(e);
+        }
+    }
+    }
+        
     private JsonObject getDevices(boolean useCahce) {
 
         if (((System.currentTimeMillis() - requestCacheTime) < maxCacheTime) && (useCahce)) {
@@ -161,6 +228,7 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
             return statusJS;
         } else {
             requestCacheTime = System.currentTimeMillis();
+            
         }
 
         JsonObjectBuilder resultJS = Json.createObjectBuilder();

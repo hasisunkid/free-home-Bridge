@@ -1,3 +1,0 @@
-2017-12-26 18:06:58,373 DEBUG [NanoHttpd Request Processor (#7)] org.sysapp.bridge.HttpServer: Key:get
-2017-12-26 18:06:58,375 DEBUG [NanoHttpd Request Processor (#7)] org.sysapp.bridge.HttpServer: Key:alias
-2017-12-26 18:06:58,375 INFO  [NanoHttpd Request Processor (#7)] org.sysapp.bridge.HttpServer: resolve wohn_heat to :ABB700C78383/ch0000
