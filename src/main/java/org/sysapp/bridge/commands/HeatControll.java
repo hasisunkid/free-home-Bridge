@@ -17,11 +17,11 @@ import org.sysapp.bridge.FreeHomeXMPBasicCommands;
  */
 public class HeatControll implements FreeHomeCommandAbstractionInterface {
 
-    private static org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(HeatControll.class);
+    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(HeatControll.class);
     private final static String R_PO_R_TEMP="odp0010" ;
     private final static String R_PO_H_TEMP="odp0006" ;
     private final static String R_PO_H_SWITCH_POS="odp0007" ;
-    private final static String R_PO_H_ON_OFF="odp0011" ;
+    private final static String R_PO_H_ON_OFF="odp0008" ;
     private final static String S_PO_H_ON_OFF="idp0011" ;
     private final static String S_PO_H_SET="idp000E" ;
     private int status = 200;
@@ -65,6 +65,8 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
          id = parms.get("id");
          ch  = parms.get("ch");
         }
+        
+        log.debug("Heat Request on "+id+":"+ch);
         // get Parameter;
         if (parms.containsKey("get"))
         {
@@ -76,20 +78,32 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
              }
              else if (get.compareToIgnoreCase("setting")==0)
              {
+                 log.debug("Heat Request setting");
                  // first check if heat is on
                   if (basicCommands.getValue(id, ch, R_PO_H_ON_OFF, false).equalsIgnoreCase("1"))
                   {
-                  this.result=basicCommands.getValue(id, ch, R_PO_H_TEMP, true);
+                  this.result=basicCommands.getValue(id, ch, R_PO_H_TEMP, false);
                   
                   }
                   else
                   {
                   this.result="0";
                   }
+                 
              }
              else if (get.compareToIgnoreCase("state")==0)
                      {
-                         this.result= basicCommands.getValue(id, ch, R_PO_H_ON_OFF, false);
+                         log.debug("Heat Request state");
+                         if (basicCommands.getValue(id, ch, R_PO_H_ON_OFF, false).compareToIgnoreCase("1")==0)
+                         {
+                             this.result="ON";
+                             
+                         }
+                         else
+                         {
+                             this.result="OFF";
+                         }
+                         
                      }
         }
         //set Heat Values
@@ -118,7 +132,7 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
                 String d_t=String.format(Locale.US,"%.1f", delta_tmp+current_pos);
                 log.debug(" sending delta position T "+d_t);
                 basicCommands.setDataPoint(id, ch, S_PO_H_SET, d_t);
-                this.result=basicCommands.getValue(id, ch, R_PO_H_TEMP, false);
+                this.result=basicCommands.getValue(id, ch, R_PO_H_TEMP, true);
             }
         }
         return this;

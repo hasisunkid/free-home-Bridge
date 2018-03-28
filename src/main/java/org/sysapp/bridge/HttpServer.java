@@ -118,12 +118,13 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
         return newFixedLengthResponse("OK");
     }
 
+    @Override
     public String getValue(String id, String ch, String port, boolean useCache) {
         
         //String value = null;
         //try {
             
-           cacheRefresh();
+           cacheRefresh(useCache);
            return  ValueCache.GetInstance().getValue(id, ch, port);
             
             /**
@@ -162,10 +163,10 @@ public class HttpServer extends NanoHTTPD implements FreeHomeXMPBasicCommands {
 
     }
 
-    private void cacheRefresh()
+    private void cacheRefresh(boolean useCache)
     {
         
-        if (((System.currentTimeMillis() - requestCacheTime) < maxCacheTime) && (this.useCache)) 
+        if (((System.currentTimeMillis() - requestCacheTime) < maxCacheTime) && (useCache)) 
         {
             log.debug("Read from Cahche ");
              
