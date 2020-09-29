@@ -1,0 +1,483 @@
+2020-09-28 14:57:00,109 INFO  [main] Server: init Server load configuration from :C:\Users\eobs\Documents\NetBeansProjects\free-home-Bridge/config.cfg_
+2020-09-28 14:57:00,219 DEBUG [main] Server: Name:U. Wörner
+2020-09-28 14:57:00,220 DEBUG [main] Server: jid:installer@busch-jaeger.de
+2020-09-28 14:57:00,220 DEBUG [main] Server: Name:WE08
+2020-09-28 14:57:00,220 DEBUG [main] Server: jid:d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 14:57:00,220 INFO  [main] Server: using jid :d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 14:57:00,220 INFO  [main] Server: ID:d7198d18-9416-4697-8ff3-9a1f47daa7f5
+2020-09-28 14:57:00,998 INFO  [main] org.sysapp.bridge.BridgeServer: Enable sysap request Cache retention time is 10000
+2020-09-28 14:57:01,001 INFO  [main] org.sysapp.bridge.commands.HeatControll: HeatControll command enabled
+2020-09-28 14:57:01,002 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=room  returns room temperature
+2020-09-28 14:57:01,002 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=setting  returns current setted temperature
+2020-09-28 14:57:01,002 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=state returns ON OFF
+2020-09-28 14:57:01,002 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 14:57:01,002 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=[ON|OFF] switche ON OFF
+2020-09-28 14:57:01,002 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=temp&value=[degr] adjust heat tempreture value float
+2020-09-28 14:57:01,002 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 14:57:01,002 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 14:57:01,003 INFO  [main] org.sysapp.bridge.commands.ShutterControll: http://...../shut?id=XXXXX&ch=xxxxx&set=[UP|DOWN|STOP] 
+2020-09-28 14:57:01,004 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_mi = ABB2DF0F1851/ch0002
+2020-09-28 14:57:01,004 INFO  [main] org.sysapp.bridge.BridgeServer: Alias umkl_heat = ABB700C785E4/ch0000
+2020-09-28 14:57:01,004 INFO  [main] org.sysapp.bridge.BridgeServer: Alias arbeit_heat = ABB700C78A20/ch0000
+2020-09-28 14:57:01,004 INFO  [main] org.sysapp.bridge.BridgeServer: Alias bad_heat = ABB700C78575/ch0000
+2020-09-28 14:57:01,004 INFO  [main] org.sysapp.bridge.BridgeServer: Alias arbeit_shut = ABB2DF0F1851/ch0003
+2020-09-28 14:57:01,004 INFO  [main] org.sysapp.bridge.BridgeServer: Alias bad_shut = ABB2E70F1851/ch0001
+2020-09-28 14:57:01,004 INFO  [main] org.sysapp.bridge.BridgeServer: Alias kuech_shut = ABB2DF0F1851/ch0001
+2020-09-28 14:57:01,004 INFO  [main] org.sysapp.bridge.BridgeServer: Alias schlaf_heat = ABB700C78A09/ch0000
+2020-09-28 14:57:01,005 INFO  [main] org.sysapp.bridge.BridgeServer: Alias flur_heat = ABB700C78A0D/ch0000
+2020-09-28 14:57:01,005 INFO  [main] org.sysapp.bridge.BridgeServer: Alias schlaf_shut = ABB2E70F1851/ch0000
+2020-09-28 14:57:01,005 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_li = ABB2DF0F1851/ch0001
+2020-09-28 14:57:01,005 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_re = ABB2E70F1851/ch0002
+2020-09-28 14:57:01,005 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_heat = ABB700C78383/ch0000
+2020-09-28 14:57:01,011 INFO  [main] org.sysapp.bridge.BridgeServer: Running! http://localhost:5222
+2020-09-28 14:57:34,090 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Key:get
+2020-09-28 14:57:34,090 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Key:alias
+2020-09-28 14:57:34,091 INFO  [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: resolve bad_heat to :ABB700C78575/ch0000
+2020-09-28 14:57:34,091 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.commands.HeatControll: Heat Request on ABB700C78575:ch0000
+2020-09-28 14:57:34,091 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 14:57:36,364 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: Create new Instance
+2020-09-28 14:57:36,364 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: Clean Cache
+2020-09-28 14:57:36,364 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB700000000
+2020-09-28 14:57:36,364 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,364 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][1]
+2020-09-28 14:57:36,365 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700000000:CH0000:ODP0000 :: 1
+2020-09-28 14:57:36,365 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB2740A1851
+2020-09-28 14:57:36,365 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,365 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0001
+2020-09-28 14:57:36,365 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0002
+2020-09-28 14:57:36,365 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0003
+2020-09-28 14:57:36,365 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB652835A56
+2020-09-28 14:57:36,365 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0010
+2020-09-28 14:57:36,370 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH0010:ODP0000 :: 0
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0011
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH0011:ODP0000 :: 0
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0012
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH0012:ODP0000 :: 0
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0013
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,371 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH0013:ODP0000 :: 0
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0014
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH0014:ODP0000 :: 0
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0015
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH0015:ODP0000 :: 0
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0016
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH0016:ODP0000 :: 0
+2020-09-28 14:57:36,372 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch001C
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH001C:ODP0000 :: 0
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch001D
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][2017-02-27]
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH001D:IDP0000 :: 2017-02-27
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0001"][11:47:01]
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH001D:IDP0001 :: 11:47:01
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0002"][0]
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB652835A56:CH001D:IDP0002 :: 0
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB700C78A20
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,373 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP0000 :: 0
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0006"][21.5]
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP0006 :: 21.5
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0007"][0.5]
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP0007 :: 0.5
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP0008 :: 1
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0009"][65]
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP0009 :: 65
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP000A :: 0
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP000B :: 0
+2020-09-28 14:57:36,374 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0010"][22.7]
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP0010 :: 22.7
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0011"][0]
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP0011 :: 0
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:ODP0012 :: 0
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:IDP0000 :: 0
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:IDP000E :: 0
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:IDP000F :: 0
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:IDP0010 :: 0
+2020-09-28 14:57:36,375 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:IDP0011 :: 0
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0016"][0]
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A20:CH0000:IDP0016 :: 0
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB2DF0F1851
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0000:ODP0000 :: 0
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0001"][0]
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0000:ODP0001 :: 0
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0000:ODP0002 :: 0
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0003"][0]
+2020-09-28 14:57:36,376 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0000:ODP0003 :: 0
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0004"][0]
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0000:ODP0004 :: 0
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0000:IDP0000 :: 0
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0001"][1]
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0000:IDP0001 :: 1
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0008"][0]
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0000:IDP0008 :: 0
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0001
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,377 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0001:ODP0000 :: 0
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0001"][0]
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0001:ODP0001 :: 0
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0001:ODP0002 :: 0
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0003"][0]
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0001:ODP0003 :: 0
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0004"][0]
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0001:ODP0004 :: 0
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0001:IDP0000 :: 0
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0001"][1]
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0001:IDP0001 :: 1
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0008"][0]
+2020-09-28 14:57:36,378 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0001:IDP0008 :: 0
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0002
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0002:ODP0000 :: 0
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0001"][0]
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0002:ODP0001 :: 0
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0002:ODP0002 :: 0
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0003"][0]
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0002:ODP0003 :: 0
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0004"][0]
+2020-09-28 14:57:36,379 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0002:ODP0004 :: 0
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0002:IDP0000 :: 0
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0001"][1]
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0002:IDP0001 :: 1
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0008"][0]
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0002:IDP0008 :: 0
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0003
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0003:ODP0000 :: 0
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0001"][0]
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0003:ODP0001 :: 0
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,380 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0003:ODP0002 :: 0
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0003"][0]
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0003:ODP0003 :: 0
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0004"][0]
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0003:ODP0004 :: 0
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0003:IDP0000 :: 0
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0001"][0]
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0003:IDP0001 :: 0
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0008"][0]
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2DF0F1851:CH0003:IDP0008 :: 0
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB700C78383
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,381 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP0000 :: 0
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0006"][22]
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP0006 :: 22
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0007"][1]
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP0007 :: 1
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP0008 :: 1
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0009"][65]
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP0009 :: 65
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP000A :: 0
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP000B :: 0
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0010"][22.92]
+2020-09-28 14:57:36,382 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP0010 :: 22.92
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0011"][0]
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP0011 :: 0
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:ODP0012 :: 0
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:IDP0000 :: 0
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:IDP000E :: 0
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:IDP000F :: 0
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:IDP0010 :: 0
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:IDP0011 :: 0
+2020-09-28 14:57:36,383 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0016"][0]
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78383:CH0000:IDP0016 :: 0
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB2E70F1851
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][1]
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0000:ODP0000 :: 1
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0001"][100]
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0000:ODP0001 :: 100
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][100]
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0000:ODP0002 :: 100
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0003"][0]
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0000:ODP0003 :: 0
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0004"][0]
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0000:ODP0004 :: 0
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][1]
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0000:IDP0000 :: 1
+2020-09-28 14:57:36,384 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0001"][1]
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0000:IDP0001 :: 1
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0008"][0]
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0000:IDP0008 :: 0
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0001
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0001:ODP0000 :: 0
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0001"][0]
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0001:ODP0001 :: 0
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0001:ODP0002 :: 0
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0003"][0]
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0001:ODP0003 :: 0
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0004"][0]
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0001:ODP0004 :: 0
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0001:IDP0000 :: 0
+2020-09-28 14:57:36,385 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0001"][1]
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0001:IDP0001 :: 1
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0008"][0]
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0001:IDP0008 :: 0
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0002
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0002:ODP0000 :: 0
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0001"][0]
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0002:ODP0001 :: 0
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0002:ODP0002 :: 0
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0003"][0]
+2020-09-28 14:57:36,386 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0002:ODP0003 :: 0
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0004"][0]
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0002:ODP0004 :: 0
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0002:IDP0000 :: 0
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0001"][1]
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0002:IDP0001 :: 1
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0008"][0]
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0002:IDP0008 :: 0
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0003
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0003:ODP0000 :: 0
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0001"][0]
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0003:ODP0001 :: 0
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,387 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0003:ODP0002 :: 0
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0003"][16]
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0003:ODP0003 :: 16
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0004"][0]
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB2E70F1851:CH0003:ODP0004 :: 0
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB286561751
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0000:ODP0000 :: 0
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0000:ODP0002 :: 0
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0000:IDP0000 :: 0
+2020-09-28 14:57:36,388 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0001
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0001:ODP0000 :: 0
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0001:ODP0002 :: 0
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0001:IDP0000 :: 0
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0002
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0002:ODP0000 :: 0
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0002:ODP0002 :: 0
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0002:IDP0000 :: 0
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0003
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0003:ODP0000 :: 0
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,389 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0003:ODP0002 :: 0
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0003:IDP0000 :: 0
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0004
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0004:ODP0000 :: 0
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0004:ODP0002 :: 0
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0004:IDP0000 :: 0
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0005
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0005:ODP0000 :: 0
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0002"][0]
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0005:ODP0002 :: 0
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB286561751:CH0005:IDP0000 :: 0
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB700C78A09
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,390 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP0000 :: 0
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0006"][7]
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP0006 :: 7
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0007"][-1]
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP0007 :: -1
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0008"][0]
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP0008 :: 0
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0009"][65]
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP0009 :: 65
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP000A :: 0
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP000B :: 0
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0010"][22.94]
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP0010 :: 22.94
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0011"][0]
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP0011 :: 0
+2020-09-28 14:57:36,391 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:ODP0012 :: 0
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:IDP0000 :: 0
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:IDP000E :: 0
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:IDP000F :: 0
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:IDP0010 :: 0
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:IDP0011 :: 0
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0016"][0]
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A09:CH0000:IDP0016 :: 0
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB2970A1851
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0001
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0002
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0003
+2020-09-28 14:57:36,392 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB700C7AEC3
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB700C78A0D
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP0000 :: 0
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0006"][7]
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP0006 :: 7
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0007"][-14]
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP0007 :: -14
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP0008 :: 1
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0009"][65]
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP0009 :: 65
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP000A :: 0
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP000B :: 0
+2020-09-28 14:57:36,393 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0010"][22.88]
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP0010 :: 22.88
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0011"][0]
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP0011 :: 0
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:ODP0012 :: 0
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:IDP0000 :: 0
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:IDP000E :: 0
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:IDP000F :: 0
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:IDP0010 :: 0
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:IDP0011 :: 0
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0016"][0]
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78A0D:CH0000:IDP0016 :: 0
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB24A0A1851
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0001
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0002
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0003
+2020-09-28 14:57:36,394 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB700C785E4
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP0000 :: 0
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0006"][21.5]
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP0006 :: 21.5
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0007"][0.5]
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP0007 :: 0.5
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP0008 :: 1
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0009"][65]
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP0009 :: 65
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP000A :: 0
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP000B :: 0
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0010"][23.96]
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP0010 :: 23.96
+2020-09-28 14:57:36,395 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0011"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP0011 :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:ODP0012 :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:IDP0000 :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:IDP000E :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:IDP000F :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:IDP0010 :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:IDP0011 :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0016"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C785E4:CH0000:IDP0016 :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :ABB700C78575
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP0000 :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0006"][22]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP0006 :: 22
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0007"][1]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP0007 :: 1
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0008"][1]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP0008 :: 1
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0009"][65]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP0009 :: 65
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000A"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP000A :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp000B"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP000B :: 0
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0010"][21.7]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP0010 :: 21.7
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0011"][0]
+2020-09-28 14:57:36,396 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP0011 :: 0
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0012"][0]
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:ODP0012 :: 0
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0000"][0]
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:IDP0000 :: 0
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000E"][0]
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:IDP000E :: 0
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp000F"][0]
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:IDP000F :: 0
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0010"][0]
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:IDP0010 :: 0
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0011"][0]
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:IDP0011 :: 0
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="idp0016"][0]
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value ABB700C78575:CH0000:IDP0016 :: 0
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :FFFF00000002
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][1]
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value FFFF00000002:CH0000:ODP0000 :: 1
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :FFFF00000003
+2020-09-28 14:57:36,397 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,398 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][1]
+2020-09-28 14:57:36,398 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value FFFF00000003:CH0000:ODP0000 :: 1
+2020-09-28 14:57:36,398 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: Dev :device id :FFFF00000004
+2020-09-28 14:57:36,398 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 		Chanel ID: ch0000
+2020-09-28 14:57:36,398 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.BridgeServer: 			 DataPoint :[Attribute: i="odp0000"][1]
+2020-09-28 14:57:36,398 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: set Value FFFF00000004:CH0000:ODP0000 :: 1
+2020-09-28 14:57:36,398 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0010 = 21.7

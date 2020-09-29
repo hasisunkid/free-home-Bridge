@@ -1,0 +1,3 @@
+2020-09-28 12:06:10,726 WARN  [NanoHttpd Request Processor (#1)] org.sysapp.bridge.HttpServer: / unknowen command
+2020-09-28 12:06:33,259 ERROR [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 12:06:33,259 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Cache is valid 

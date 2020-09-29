@@ -1,0 +1,427 @@
+2020-09-28 20:13:03,952 INFO  [main] Server: init Server load configuration from :C:\Users\eobs\Documents\NetBeansProjects\free-home-Bridge/config.cfg_
+2020-09-28 20:13:04,064 DEBUG [main] Server: Name:U. Wörner
+2020-09-28 20:13:04,065 DEBUG [main] Server: jid:installer@busch-jaeger.de
+2020-09-28 20:13:04,065 DEBUG [main] Server: Name:WE08
+2020-09-28 20:13:04,065 DEBUG [main] Server: jid:d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 20:13:04,065 INFO  [main] Server: using jid :d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 20:13:04,065 INFO  [main] Server: ID:d7198d18-9416-4697-8ff3-9a1f47daa7f5
+2020-09-28 20:13:04,836 INFO  [main] org.sysapp.bridge.BridgeServer: Enable sysap request Cache retention time is 120000
+2020-09-28 20:13:04,839 INFO  [main] org.sysapp.bridge.commands.HeatControll: HeatControll command enabled
+2020-09-28 20:13:04,839 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=room  returns room temperature
+2020-09-28 20:13:04,839 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=setting  returns current setted temperature
+2020-09-28 20:13:04,839 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=state returns ON OFF
+2020-09-28 20:13:04,839 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 20:13:04,839 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=[ON|OFF] switche ON OFF
+2020-09-28 20:13:04,839 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=temp&value=[degr] adjust heat tempreture value float
+2020-09-28 20:13:04,839 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 20:13:04,839 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.commands.ShutterControll: http://...../shut?id=XXXXX&ch=xxxxx&set=[UP|DOWN|STOP] 
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_mi = ABB2DF0F1851/ch0002
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.BridgeServer: Alias umkl_heat = ABB700C785E4/ch0000
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.BridgeServer: Alias arbeit_heat = ABB700C78A20/ch0000
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.BridgeServer: Alias bad_heat = ABB700C78575/ch0000
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.BridgeServer: Alias arbeit_shut = ABB2DF0F1851/ch0003
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.BridgeServer: Alias bad_shut = ABB2E70F1851/ch0001
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.BridgeServer: Alias kuech_shut = ABB2DF0F1851/ch0001
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.BridgeServer: Alias schlaf_heat = ABB700C78A09/ch0000
+2020-09-28 20:13:04,840 INFO  [main] org.sysapp.bridge.BridgeServer: Alias flur_heat = ABB700C78A0D/ch0000
+2020-09-28 20:13:04,841 INFO  [main] org.sysapp.bridge.BridgeServer: Alias schlaf_shut = ABB2E70F1851/ch0000
+2020-09-28 20:13:04,841 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_li = ABB2DF0F1851/ch0001
+2020-09-28 20:13:04,841 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_re = ABB2E70F1851/ch0002
+2020-09-28 20:13:04,841 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_heat = ABB700C78383/ch0000
+2020-09-28 20:13:04,899 INFO  [main] org.sysapp.bridge.MqttServer: Connecting to broker: tcp://zbox:1883
+2020-09-28 20:13:05,399 INFO  [main] org.sysapp.bridge.MqttServer: Connected
+2020-09-28 20:13:05,410 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,428 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,435 INFO  [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: free_home/heat/arbeit_heat/command/state 
+2020-09-28 20:13:05,440 INFO  [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: resolve arbeit_heat to :ABB700C78A20/ch0000
+2020-09-28 20:13:05,440 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.commands.HeatControll: change heating state
+2020-09-28 20:13:05,440 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: ABB700C78A20/ch0000/idp0011set 0
+2020-09-28 20:13:05,607 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Start polling values
+2020-09-28 20:13:05,610 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve arbeit_heat to :ABB700C78A20/ch0000
+2020-09-28 20:13:05,610 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,960 ERROR [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,960 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,961 INFO  [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: free_home/heat/wohn_heat/command/state 
+2020-09-28 20:13:05,961 INFO  [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: resolve wohn_heat to :ABB700C78383/ch0000
+2020-09-28 20:13:05,961 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.commands.HeatControll: change heating state
+2020-09-28 20:13:05,961 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: ABB700C78383/ch0000/idp0011set 0
+2020-09-28 20:13:05,961 ERROR [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,961 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,961 INFO  [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: free_home/heat/umkl_heat/command/state 
+2020-09-28 20:13:05,962 INFO  [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: resolve umkl_heat to :ABB700C785E4/ch0000
+2020-09-28 20:13:05,962 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.commands.HeatControll: change heating state
+2020-09-28 20:13:05,962 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: ABB700C785E4/ch0000/idp0011set 0
+2020-09-28 20:13:05,962 ERROR [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,962 INFO  [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: free_home/heat/schlaf_heat/command/temp 
+2020-09-28 20:13:05,962 INFO  [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: resolve schlaf_heat to :ABB700C78A09/ch0000
+2020-09-28 20:13:05,962 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: ABB700C78A09/ch0000/idp0011set 1
+2020-09-28 20:13:05,963 ERROR [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,966 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: Create new Instance
+2020-09-28 20:13:05,966 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A20:ch0000:odp0010
+2020-09-28 20:13:05,966 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A20:ch0000:odp0010 = 
+2020-09-28 20:13:05,966 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,966 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,966 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,966 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,966 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,966 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,967 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,967 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A20:ch0000:odp0008
+2020-09-28 20:13:05,967 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A20:ch0000:odp0008 = 
+2020-09-28 20:13:05,967 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,967 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,967 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,967 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,967 DEBUG [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: OK
+2020-09-28 20:13:05,967 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,967 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A20:ch0000:odp0008
+2020-09-28 20:13:05,968 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A20:ch0000:odp0008 = 
+2020-09-28 20:13:05,968 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve wohn_heat to :ABB700C78383/ch0000
+2020-09-28 20:13:05,968 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,968 ERROR [MQTT Call: Free_Home_Bridge] org.sysapp.bridge.MqttServer: Connection lost
+MqttException (0) - java.lang.RuntimeException: Uncompilable source code - Erroneous tree type: <any>
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:228)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: Uncompilable source code - Erroneous tree type: <any>
+	at org.sysapp.bridge.commands.HeatControll.execute(HeatControll.java:75)
+	at org.sysapp.bridge.MqttServer.lambda$messageArrived$5(MqttServer.java:132)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.sysapp.bridge.MqttServer.messageArrived(MqttServer.java:131)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.deliverMessage(CommsCallback.java:519)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.handleMessage(CommsCallback.java:417)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:214)
+	... 1 more
+2020-09-28 20:13:05,968 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,973 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78383:ch0000:odp0010
+2020-09-28 20:13:05,973 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78383:ch0000:odp0010 = 
+2020-09-28 20:13:05,974 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,974 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,974 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78383:ch0000:odp0008
+2020-09-28 20:13:05,974 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78383:ch0000:odp0008 = 
+2020-09-28 20:13:05,974 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,975 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,975 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78383:ch0000:odp0008
+2020-09-28 20:13:05,975 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78383:ch0000:odp0008 = 
+2020-09-28 20:13:05,975 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve umkl_heat to :ABB700C785E4/ch0000
+2020-09-28 20:13:05,975 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,975 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,975 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C785E4:ch0000:odp0010
+2020-09-28 20:13:05,976 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C785E4:ch0000:odp0010 = 
+2020-09-28 20:13:05,976 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,976 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,976 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C785E4:ch0000:odp0008
+2020-09-28 20:13:05,976 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C785E4:ch0000:odp0008 = 
+2020-09-28 20:13:05,976 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,976 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,977 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C785E4:ch0000:odp0008
+2020-09-28 20:13:05,977 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C785E4:ch0000:odp0008 = 
+2020-09-28 20:13:05,977 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve schlaf_heat to :ABB700C78A09/ch0000
+2020-09-28 20:13:05,977 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,977 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,977 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A09:ch0000:odp0010
+2020-09-28 20:13:05,977 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A09:ch0000:odp0010 = 
+2020-09-28 20:13:05,977 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,977 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,977 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A09:ch0000:odp0008
+2020-09-28 20:13:05,977 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A09:ch0000:odp0008 = 
+2020-09-28 20:13:05,977 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,978 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,978 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A09:ch0000:odp0008
+2020-09-28 20:13:05,978 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A09:ch0000:odp0008 = 
+2020-09-28 20:13:05,978 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve bad_heat to :ABB700C78575/ch0000
+2020-09-28 20:13:05,978 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,978 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,978 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78575:ch0000:odp0010
+2020-09-28 20:13:05,978 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0010 = 
+2020-09-28 20:13:05,978 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,979 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,979 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78575:ch0000:odp0008
+2020-09-28 20:13:05,979 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0008 = 
+2020-09-28 20:13:05,979 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,979 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,979 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78575:ch0000:odp0008
+2020-09-28 20:13:05,979 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0008 = 
+2020-09-28 20:13:05,979 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve flur_heat to :ABB700C78A0D/ch0000
+2020-09-28 20:13:05,980 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,980 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,980 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A0D:ch0000:odp0010
+2020-09-28 20:13:05,980 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A0D:ch0000:odp0010 = 
+2020-09-28 20:13:05,980 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,980 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,980 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A0D:ch0000:odp0008
+2020-09-28 20:13:05,980 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A0D:ch0000:odp0008 = 
+2020-09-28 20:13:05,980 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 20:13:05,980 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 20:13:05,981 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A0D:ch0000:odp0008
+2020-09-28 20:13:05,981 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A0D:ch0000:odp0008 = 
+2020-09-28 20:13:05,981 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/flur_heat/state : OFF old value null
+2020-09-28 20:13:05,982 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,982 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/wohn_heat/temp :  old value null
+2020-09-28 20:13:05,982 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,982 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/umkl_heat/setpoint : 0 old value null
+2020-09-28 20:13:05,982 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,983 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/schlaf_heat/setpoint : 0 old value null
+2020-09-28 20:13:05,983 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,983 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/bad_heat/setpoint : 0 old value null
+2020-09-28 20:13:05,983 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,984 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/wohn_heat/setpoint : 0 old value null
+2020-09-28 20:13:05,984 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,984 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/arbeit_heat/setpoint : 0 old value null
+2020-09-28 20:13:05,984 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,984 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/umkl_heat/state : OFF old value null
+2020-09-28 20:13:05,984 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,985 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/schlaf_heat/temp :  old value null
+2020-09-28 20:13:05,985 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,985 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/schlaf_heat/state : OFF old value null
+2020-09-28 20:13:05,985 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,985 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/bad_heat/state : OFF old value null
+2020-09-28 20:13:05,986 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,986 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/bad_heat/temp :  old value null
+2020-09-28 20:13:05,986 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,987 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/arbeit_heat/temp :  old value null
+2020-09-28 20:13:05,987 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,987 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/umkl_heat/temp :  old value null
+2020-09-28 20:13:05,987 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,988 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/wohn_heat/state : OFF old value null
+2020-09-28 20:13:05,988 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,989 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/arbeit_heat/state : OFF old value null
+2020-09-28 20:13:05,989 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,989 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/flur_heat/temp :  old value null
+2020-09-28 20:13:05,990 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+2020-09-28 20:13:05,990 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/flur_heat/setpoint : 0 old value null
+2020-09-28 20:13:05,990 ERROR [Timer-0] org.sysapp.bridge.MqttServer: can't publish topic
+Keine Verbindung zu Client (32104)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.sendNoWait(ClientComms.java:205)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.publish(MqttAsyncClient.java:1375)
+	at org.eclipse.paho.client.mqttv3.MqttClient.publish(MqttClient.java:570)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$2(MqttServer.java:111)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.lambda$buildToppicList$3(MqttServer.java:103)
+	at java.util.HashMap.forEach(HashMap.java:1289)
+	at org.sysapp.bridge.MqttServer.buildToppicList(MqttServer.java:102)
+	at org.sysapp.bridge.MqttServer.run(MqttServer.java:77)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)

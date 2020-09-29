@@ -1,0 +1,7 @@
+2020-09-28 18:25:59,635 INFO  [main] Server: init Server load configuration from :C:\Users\eobs\Documents\NetBeansProjects\free-home-Bridge/config.cfg_
+2020-09-28 18:25:59,734 DEBUG [main] Server: Name:U. Wörner
+2020-09-28 18:25:59,734 DEBUG [main] Server: jid:installer@busch-jaeger.de
+2020-09-28 18:25:59,734 DEBUG [main] Server: Name:WE08
+2020-09-28 18:25:59,734 DEBUG [main] Server: jid:d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 18:25:59,734 INFO  [main] Server: using jid :d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 18:25:59,734 INFO  [main] Server: ID:d7198d18-9416-4697-8ff3-9a1f47daa7f5

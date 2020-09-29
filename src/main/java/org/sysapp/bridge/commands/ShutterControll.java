@@ -5,6 +5,8 @@
  */
 package org.sysapp.bridge.commands;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.sysapp.bridge.FreeHomeCommandAbstractionInterface;
@@ -74,6 +76,26 @@ public class ShutterControll implements FreeHomeCommandAbstractionInterface {
     @Override
     public String getErrorMessage() {
         return error;
+    }
+
+    @Override
+    public Map<String, String> getTopics(FreeHomeXMPBasicCommands basicCommands) {
+        return new HashMap<>();
+    }
+
+    @Override
+    public List<String> subsciptionList(FreeHomeXMPBasicCommands basicCommands) {
+     return new ArrayList<>();
+    }
+
+    @Override
+    public Map<String,String> execute(String command, String value, FreeHomeXMPBasicCommands basicCommands) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean matchWithTopicPath(String path) {
+        return false;
     }
 
 }

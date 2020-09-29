@@ -1,0 +1,34 @@
+2020-09-28 12:14:18,797 INFO  [main] Server: init Server load configuration from :C:\Users\eobs\Documents\NetBeansProjects\free-home-Bridge/config.cfg_
+2020-09-28 12:14:18,909 DEBUG [main] Server: Name:U. Wörner
+2020-09-28 12:14:18,909 DEBUG [main] Server: jid:installer@busch-jaeger.de
+2020-09-28 12:14:18,909 DEBUG [main] Server: Name:WE08
+2020-09-28 12:14:18,909 DEBUG [main] Server: jid:d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 12:14:18,909 INFO  [main] Server: using jid :d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 12:14:18,909 INFO  [main] Server: ID:d7198d18-9416-4697-8ff3-9a1f47daa7f5
+2020-09-28 12:14:19,638 INFO  [main] org.sysapp.bridge.HttpServer: Enable sysap request Cache retention time is 10000
+2020-09-28 12:14:19,640 INFO  [main] org.sysapp.bridge.HttpServer: Running! http://localhost:8085
+2020-09-28 12:14:19,641 INFO  [main] org.sysapp.bridge.commands.HeatControll: HeatControll command enabled
+2020-09-28 12:14:19,641 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=room  returns room temperature
+2020-09-28 12:14:19,641 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=setting  returns current setted temperature
+2020-09-28 12:14:19,641 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=state returns ON OFF
+2020-09-28 12:14:19,641 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 12:14:19,641 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=[ON|OFF] switche ON OFF
+2020-09-28 12:14:19,641 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=temp&value=[degr] adjust heat tempreture value float
+2020-09-28 12:14:19,641 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 12:14:19,641 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 12:14:19,642 INFO  [main] org.sysapp.bridge.commands.ShutterControll: http://...../shut?id=XXXXX&ch=xxxxx&set=[UP|DOWN|STOP] 
+2020-09-28 12:14:19,642 INFO  [main] org.sysapp.bridge.HttpServer: Alias wohn_shut_mi = ABB2DF0F1851/ch0002
+2020-09-28 12:14:19,642 INFO  [main] org.sysapp.bridge.HttpServer: Alias umkl_heat = ABB700C785E4/ch0000
+2020-09-28 12:14:19,642 INFO  [main] org.sysapp.bridge.HttpServer: Alias arbeit_heat = ABB700C78A20/ch0000
+2020-09-28 12:14:19,642 INFO  [main] org.sysapp.bridge.HttpServer: Alias bad_heat = ABB700C78575/ch0000
+2020-09-28 12:14:19,642 INFO  [main] org.sysapp.bridge.HttpServer: Alias arbeit_shut = ABB2DF0F1851/ch0003
+2020-09-28 12:14:19,642 INFO  [main] org.sysapp.bridge.HttpServer: Alias bad_shut = ABB2E70F1851/ch0001
+2020-09-28 12:14:19,642 INFO  [main] org.sysapp.bridge.HttpServer: Alias kuech_shut = ABB2DF0F1851/ch0001
+2020-09-28 12:14:19,642 INFO  [main] org.sysapp.bridge.HttpServer: Alias schlaf_heat = ABB700C78A09/ch0000
+2020-09-28 12:14:19,643 INFO  [main] org.sysapp.bridge.HttpServer: Alias flur_heat = ABB700C78A0D/ch0000
+2020-09-28 12:14:19,643 INFO  [main] org.sysapp.bridge.HttpServer: Alias schlaf_shut = ABB2E70F1851/ch0000
+2020-09-28 12:14:19,643 INFO  [main] org.sysapp.bridge.HttpServer: Alias wohn_shut_li = ABB2DF0F1851/ch0001
+2020-09-28 12:14:19,643 INFO  [main] org.sysapp.bridge.HttpServer: Alias wohn_shut_re = ABB2E70F1851/ch0002
+2020-09-28 12:14:19,643 INFO  [main] org.sysapp.bridge.HttpServer: Alias wohn_heat = ABB700C78383/ch0000
+2020-09-28 12:14:40,499 DEBUG [NanoHttpd Request Processor (#1)] org.sysapp.bridge.HttpServer: Key:alias
+2020-09-28 12:14:58,558 DEBUG [NanoHttpd Request Processor (#2)] org.sysapp.bridge.HttpServer: Key:alias

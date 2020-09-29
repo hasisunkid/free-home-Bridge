@@ -1,0 +1,131 @@
+2020-09-28 18:47:26,877 INFO  [main] Server: init Server load configuration from :C:\Users\eobs\Documents\NetBeansProjects\free-home-Bridge/config.cfg_
+2020-09-28 18:47:26,982 DEBUG [main] Server: Name:U. Wörner
+2020-09-28 18:47:26,983 DEBUG [main] Server: jid:installer@busch-jaeger.de
+2020-09-28 18:47:26,983 DEBUG [main] Server: Name:WE08
+2020-09-28 18:47:26,983 DEBUG [main] Server: jid:d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 18:47:26,983 INFO  [main] Server: using jid :d7198d18-9416-4697-8ff3-9a1f47daa7f5@busch-jaeger.de
+2020-09-28 18:47:26,983 INFO  [main] Server: ID:d7198d18-9416-4697-8ff3-9a1f47daa7f5
+2020-09-28 18:47:27,718 INFO  [main] org.sysapp.bridge.BridgeServer: Enable sysap request Cache retention time is 120000
+2020-09-28 18:47:27,720 INFO  [main] org.sysapp.bridge.commands.HeatControll: HeatControll command enabled
+2020-09-28 18:47:27,720 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=room  returns room temperature
+2020-09-28 18:47:27,720 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=setting  returns current setted temperature
+2020-09-28 18:47:27,720 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=state returns ON OFF
+2020-09-28 18:47:27,720 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 18:47:27,720 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=[ON|OFF] switche ON OFF
+2020-09-28 18:47:27,720 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=temp&value=[degr] adjust heat tempreture value float
+2020-09-28 18:47:27,720 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 18:47:27,720 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 18:47:27,721 INFO  [main] org.sysapp.bridge.commands.ShutterControll: http://...../shut?id=XXXXX&ch=xxxxx&set=[UP|DOWN|STOP] 
+2020-09-28 18:47:27,721 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_mi = ABB2DF0F1851/ch0002
+2020-09-28 18:47:27,721 INFO  [main] org.sysapp.bridge.BridgeServer: Alias umkl_heat = ABB700C785E4/ch0000
+2020-09-28 18:47:27,721 INFO  [main] org.sysapp.bridge.BridgeServer: Alias arbeit_heat = ABB700C78A20/ch0000
+2020-09-28 18:47:27,721 INFO  [main] org.sysapp.bridge.BridgeServer: Alias bad_heat = ABB700C78575/ch0000
+2020-09-28 18:47:27,722 INFO  [main] org.sysapp.bridge.BridgeServer: Alias arbeit_shut = ABB2DF0F1851/ch0003
+2020-09-28 18:47:27,722 INFO  [main] org.sysapp.bridge.BridgeServer: Alias bad_shut = ABB2E70F1851/ch0001
+2020-09-28 18:47:27,722 INFO  [main] org.sysapp.bridge.BridgeServer: Alias kuech_shut = ABB2DF0F1851/ch0001
+2020-09-28 18:47:27,722 INFO  [main] org.sysapp.bridge.BridgeServer: Alias schlaf_heat = ABB700C78A09/ch0000
+2020-09-28 18:47:27,722 INFO  [main] org.sysapp.bridge.BridgeServer: Alias flur_heat = ABB700C78A0D/ch0000
+2020-09-28 18:47:27,722 INFO  [main] org.sysapp.bridge.BridgeServer: Alias schlaf_shut = ABB2E70F1851/ch0000
+2020-09-28 18:47:27,722 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_li = ABB2DF0F1851/ch0001
+2020-09-28 18:47:27,722 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_re = ABB2E70F1851/ch0002
+2020-09-28 18:47:27,722 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_heat = ABB700C78383/ch0000
+2020-09-28 18:47:27,781 INFO  [main] org.sysapp.bridge.MqttServer: Connecting to broker: tcp://zbox:1883
+2020-09-28 18:47:28,293 INFO  [main] org.sysapp.bridge.MqttServer: Connected
+2020-09-28 18:47:28,293 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Start polling values
+2020-09-28 18:47:28,295 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve arbeit_heat to :ABB700C78A20/ch0000
+2020-09-28 18:47:28,296 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,803 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,804 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: Create new Instance
+2020-09-28 18:47:28,804 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A20:ch0000:odp0010
+2020-09-28 18:47:28,804 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A20:ch0000:odp0010 = 
+2020-09-28 18:47:28,804 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,804 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,804 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A20:ch0000:odp0008
+2020-09-28 18:47:28,804 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A20:ch0000:odp0008 = 
+2020-09-28 18:47:28,804 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,805 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,805 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A20:ch0000:odp0008
+2020-09-28 18:47:28,809 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A20:ch0000:odp0008 = 
+2020-09-28 18:47:28,810 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve wohn_heat to :ABB700C78383/ch0000
+2020-09-28 18:47:28,810 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,810 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,810 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78383:ch0000:odp0010
+2020-09-28 18:47:28,810 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78383:ch0000:odp0010 = 
+2020-09-28 18:47:28,811 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,811 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,811 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78383:ch0000:odp0008
+2020-09-28 18:47:28,811 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78383:ch0000:odp0008 = 
+2020-09-28 18:47:28,811 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,811 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,811 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78383:ch0000:odp0008
+2020-09-28 18:47:28,811 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78383:ch0000:odp0008 = 
+2020-09-28 18:47:28,811 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve umkl_heat to :ABB700C785E4/ch0000
+2020-09-28 18:47:28,812 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,812 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,812 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C785E4:ch0000:odp0010
+2020-09-28 18:47:28,812 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C785E4:ch0000:odp0010 = 
+2020-09-28 18:47:28,812 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,812 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,812 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C785E4:ch0000:odp0008
+2020-09-28 18:47:28,812 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C785E4:ch0000:odp0008 = 
+2020-09-28 18:47:28,813 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,813 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,813 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C785E4:ch0000:odp0008
+2020-09-28 18:47:28,813 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C785E4:ch0000:odp0008 = 
+2020-09-28 18:47:28,813 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve schlaf_heat to :ABB700C78A09/ch0000
+2020-09-28 18:47:28,813 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,813 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,813 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A09:ch0000:odp0010
+2020-09-28 18:47:28,813 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A09:ch0000:odp0010 = 
+2020-09-28 18:47:28,814 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,814 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,814 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A09:ch0000:odp0008
+2020-09-28 18:47:28,814 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A09:ch0000:odp0008 = 
+2020-09-28 18:47:28,814 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,814 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,814 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A09:ch0000:odp0008
+2020-09-28 18:47:28,814 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A09:ch0000:odp0008 = 
+2020-09-28 18:47:28,814 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve bad_heat to :ABB700C78575/ch0000
+2020-09-28 18:47:28,815 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,815 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,815 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78575:ch0000:odp0010
+2020-09-28 18:47:28,815 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0010 = 
+2020-09-28 18:47:28,815 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,815 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,815 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78575:ch0000:odp0008
+2020-09-28 18:47:28,815 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0008 = 
+2020-09-28 18:47:28,815 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,816 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,816 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78575:ch0000:odp0008
+2020-09-28 18:47:28,816 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0008 = 
+2020-09-28 18:47:28,816 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve flur_heat to :ABB700C78A0D/ch0000
+2020-09-28 18:47:28,816 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,816 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,816 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A0D:ch0000:odp0010
+2020-09-28 18:47:28,816 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A0D:ch0000:odp0010 = 
+2020-09-28 18:47:28,816 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,817 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,817 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A0D:ch0000:odp0008
+2020-09-28 18:47:28,817 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A0D:ch0000:odp0008 = 
+2020-09-28 18:47:28,817 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:47:28,817 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:47:28,817 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A0D:ch0000:odp0008
+2020-09-28 18:47:28,817 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A0D:ch0000:odp0008 = 
+2020-09-28 18:47:28,818 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/flur_heat/state : OFF old value null
+2020-09-28 18:47:28,833 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/wohn_heat/temp :  old value null
+2020-09-28 18:47:28,841 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/umkl_heat/setpoint : 0 old value null
+2020-09-28 18:47:28,849 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/schlaf_heat/setpoint : 0 old value null
+2020-09-28 18:47:28,857 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/bad_heat/setpoint : 0 old value null
+2020-09-28 18:47:28,864 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/wohn_heat/setpoint : 0 old value null
+2020-09-28 18:47:28,872 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/arbeit_heat/setpoint : 0 old value null
+2020-09-28 18:47:28,881 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/umkl_heat/state : OFF old value null
+2020-09-28 18:47:28,889 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/schlaf_heat/temp :  old value null
+2020-09-28 18:47:28,896 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/schlaf_heat/state : OFF old value null
+2020-09-28 18:47:28,908 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/bad_heat/state : OFF old value null
+2020-09-28 18:47:28,915 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/bad_heat/temp :  old value null
+2020-09-28 18:47:28,927 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/arbeit_heat/temp :  old value null
+2020-09-28 18:47:28,933 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/umkl_heat/temp :  old value null
+2020-09-28 18:47:28,941 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/wohn_heat/state : OFF old value null
+2020-09-28 18:47:28,950 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/arbeit_heat/state : OFF old value null
+2020-09-28 18:47:28,962 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/flur_heat/temp :  old value null
+2020-09-28 18:47:28,972 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Change on topic free_home/heat/flur_heat/setpoint : 0 old value null

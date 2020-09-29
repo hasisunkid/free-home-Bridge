@@ -1,0 +1,106 @@
+2020-09-28 18:26:00,465 INFO  [main] org.sysapp.bridge.BridgeServer: Enable sysap request Cache retention time is 120000
+2020-09-28 18:26:00,469 INFO  [main] org.sysapp.bridge.commands.HeatControll: HeatControll command enabled
+2020-09-28 18:26:00,469 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=room  returns room temperature
+2020-09-28 18:26:00,469 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=setting  returns current setted temperature
+2020-09-28 18:26:00,469 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&get=state returns ON OFF
+2020-09-28 18:26:00,469 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 18:26:00,470 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=[ON|OFF] switche ON OFF
+2020-09-28 18:26:00,470 INFO  [main] org.sysapp.bridge.commands.HeatControll: http://...../heat?id=XXXXX&ch=xxxxx&set=temp&value=[degr] adjust heat tempreture value float
+2020-09-28 18:26:00,470 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 18:26:00,470 INFO  [main] org.sysapp.bridge.commands.HeatControll: ----------------------------------------------------------------------------------------
+2020-09-28 18:26:00,470 INFO  [main] org.sysapp.bridge.commands.ShutterControll: http://...../shut?id=XXXXX&ch=xxxxx&set=[UP|DOWN|STOP] 
+2020-09-28 18:26:00,471 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_mi = ABB2DF0F1851/ch0002
+2020-09-28 18:26:00,471 INFO  [main] org.sysapp.bridge.BridgeServer: Alias umkl_heat = ABB700C785E4/ch0000
+2020-09-28 18:26:00,471 INFO  [main] org.sysapp.bridge.BridgeServer: Alias arbeit_heat = ABB700C78A20/ch0000
+2020-09-28 18:26:00,471 INFO  [main] org.sysapp.bridge.BridgeServer: Alias bad_heat = ABB700C78575/ch0000
+2020-09-28 18:26:00,471 INFO  [main] org.sysapp.bridge.BridgeServer: Alias arbeit_shut = ABB2DF0F1851/ch0003
+2020-09-28 18:26:00,471 INFO  [main] org.sysapp.bridge.BridgeServer: Alias bad_shut = ABB2E70F1851/ch0001
+2020-09-28 18:26:00,471 INFO  [main] org.sysapp.bridge.BridgeServer: Alias kuech_shut = ABB2DF0F1851/ch0001
+2020-09-28 18:26:00,471 INFO  [main] org.sysapp.bridge.BridgeServer: Alias schlaf_heat = ABB700C78A09/ch0000
+2020-09-28 18:26:00,471 INFO  [main] org.sysapp.bridge.BridgeServer: Alias flur_heat = ABB700C78A0D/ch0000
+2020-09-28 18:26:00,472 INFO  [main] org.sysapp.bridge.BridgeServer: Alias schlaf_shut = ABB2E70F1851/ch0000
+2020-09-28 18:26:00,472 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_li = ABB2DF0F1851/ch0001
+2020-09-28 18:26:00,472 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_shut_re = ABB2E70F1851/ch0002
+2020-09-28 18:26:00,472 INFO  [main] org.sysapp.bridge.BridgeServer: Alias wohn_heat = ABB700C78383/ch0000
+2020-09-28 18:26:00,534 INFO  [main] org.sysapp.bridge.MqttServer: Connecting to broker: tcp://zbox:1883
+2020-09-28 18:26:01,029 INFO  [main] org.sysapp.bridge.MqttServer: Connected
+2020-09-28 18:26:01,030 INFO  [Timer-0] org.sysapp.bridge.MqttServer: Start polling values
+2020-09-28 18:26:01,032 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve arbeit_heat to :ABB700C78A20/ch0000
+2020-09-28 18:26:01,032 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,564 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,565 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: Create new Instance
+2020-09-28 18:26:01,565 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A20:ch0000:odp0010
+2020-09-28 18:26:01,565 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A20:ch0000:odp0010 = 
+2020-09-28 18:26:01,565 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,565 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,566 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A20:ch0000:odp0008
+2020-09-28 18:26:01,566 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A20:ch0000:odp0008 = 
+2020-09-28 18:26:01,566 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,566 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,570 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A20:ch0000:odp0008
+2020-09-28 18:26:01,571 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A20:ch0000:odp0008 = 
+2020-09-28 18:26:01,571 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve wohn_heat to :ABB700C78383/ch0000
+2020-09-28 18:26:01,571 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,571 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,571 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78383:ch0000:odp0010
+2020-09-28 18:26:01,571 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78383:ch0000:odp0010 = 
+2020-09-28 18:26:01,572 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,572 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,572 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78383:ch0000:odp0008
+2020-09-28 18:26:01,572 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78383:ch0000:odp0008 = 
+2020-09-28 18:26:01,572 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,572 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,572 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78383:ch0000:odp0008
+2020-09-28 18:26:01,572 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78383:ch0000:odp0008 = 
+2020-09-28 18:26:01,573 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve umkl_heat to :ABB700C785E4/ch0000
+2020-09-28 18:26:01,573 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,573 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,573 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C785E4:ch0000:odp0010
+2020-09-28 18:26:01,573 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C785E4:ch0000:odp0010 = 
+2020-09-28 18:26:01,573 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,574 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,574 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C785E4:ch0000:odp0008
+2020-09-28 18:26:01,574 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C785E4:ch0000:odp0008 = 
+2020-09-28 18:26:01,574 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,574 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,574 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C785E4:ch0000:odp0008
+2020-09-28 18:26:01,574 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C785E4:ch0000:odp0008 = 
+2020-09-28 18:26:01,574 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve schlaf_heat to :ABB700C78A09/ch0000
+2020-09-28 18:26:01,575 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,575 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,575 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A09:ch0000:odp0010
+2020-09-28 18:26:01,575 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A09:ch0000:odp0010 = 
+2020-09-28 18:26:01,575 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,575 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,575 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A09:ch0000:odp0008
+2020-09-28 18:26:01,575 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A09:ch0000:odp0008 = 
+2020-09-28 18:26:01,575 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,576 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,576 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A09:ch0000:odp0008
+2020-09-28 18:26:01,576 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A09:ch0000:odp0008 = 
+2020-09-28 18:26:01,576 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve bad_heat to :ABB700C78575/ch0000
+2020-09-28 18:26:01,576 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,576 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,576 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78575:ch0000:odp0010
+2020-09-28 18:26:01,577 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0010 = 
+2020-09-28 18:26:01,577 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,577 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,577 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78575:ch0000:odp0008
+2020-09-28 18:26:01,577 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0008 = 
+2020-09-28 18:26:01,577 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,577 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,578 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78575:ch0000:odp0008
+2020-09-28 18:26:01,578 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78575:ch0000:odp0008 = 
+2020-09-28 18:26:01,578 INFO  [Timer-0] org.sysapp.bridge.BridgeServer: resolve flur_heat to :ABB700C78A0D/ch0000
+2020-09-28 18:26:01,578 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,578 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,578 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A0D:ch0000:odp0010
+2020-09-28 18:26:01,578 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A0D:ch0000:odp0010 = 
+2020-09-28 18:26:01,578 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,578 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,578 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A0D:ch0000:odp0008
+2020-09-28 18:26:01,579 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A0D:ch0000:odp0008 = 
+2020-09-28 18:26:01,579 DEBUG [Timer-0] org.sysapp.bridge.BridgeServer: Reload Cache
+2020-09-28 18:26:01,579 ERROR [Timer-0] org.sysapp.bridge.BridgeServer: java.lang.IllegalStateException: Cannot send stanzas before resource binding has completed.
+2020-09-28 18:26:01,579 WARN  [Timer-0] org.sysapp.bridge.ValueCache: No value found for path :ABB700C78A0D:ch0000:odp0008
+2020-09-28 18:26:01,579 DEBUG [Timer-0] org.sysapp.bridge.ValueCache: value request :ABB700C78A0D:ch0000:odp0008 = 

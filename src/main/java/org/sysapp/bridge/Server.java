@@ -55,6 +55,14 @@ public class Server {
         String pwd = prop.getProperty("sysap.password");
         String domain = prop.getProperty("sysap.service.domain", "busch-jaeger.de");
         String resource = prop.getProperty("sysap.resource");
+        
+        String mqtt_broker=prop.getProperty("mqtt.broker", "localhost");
+        String mqtt_user=prop.getProperty("mqtt.user", "");
+        String mqtt_pwd=prop.getProperty("mqtt.pwd", "");
+        long mqtt_poll=Long.valueOf(prop.getProperty("mqtt.pollint", "60"));
+        int mqtt_port = Integer.valueOf(prop.getProperty("mqtt.port", "1883"));
+        
+        
         int cacheRetention=Integer.valueOf(prop.getProperty("bridge.cacheretention", "12000"));
         String id=null;
 
@@ -118,13 +126,18 @@ public class Server {
 
         XmppClient xmppClient = XmppClient.create(domain, configuration, tcpConfiguration, boshConfiguration);
 
-        HttpServer server=new HttpServer(port_bridge, xmppClient,cacheRetention);
+        BridgeServer server=new BridgeServer( xmppClient,cacheRetention);
         server.addCommand("org.sysapp.bridge.commands.HeatControll");
         server.addCommand("org.sysapp.bridge.commands.ShutterControll");
         server.registerAliastable(prop);
         
+       // HttpServer httpServer=new HttpServer(port_bridge, server);
         
-         server.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
+        
+         //httpServer.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
+         
+         MqttServer mqtt=new MqttServer();
+         mqtt.start(mqtt_broker,mqtt_port,mqtt_user,mqtt_pwd,mqtt_poll,server);
 
 //    xmppClient.addInboundPresenceListener(e -> {
 //        System.out.println(e.getPresence().getStatus());
