@@ -6,6 +6,8 @@
 package org.sysapp.bridge;
 
 import java.util.HashMap;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
  
 
 /**
@@ -16,7 +18,22 @@ public class ValueCache {
     
     private static ValueCache valueCacheInstance;
     private final HashMap<String,String> valueCache=new HashMap<String, String>();
-    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(ValueCache.class);
+    private static final     Logger log =  LogManager.getLogger(ValueCache.class);
+    private long lastRefresh;
+   
+
+    public ValueCache() {
+        
+        lastRefresh=System.currentTimeMillis();
+    }
+
+    public boolean isCahceValid(long retention)
+    {
+        boolean valid =((System.currentTimeMillis()-lastRefresh)<retention) && !this.valueCache.isEmpty();
+        log.debug(String.format("cahce is valid %b it retaind %d ms ", valid,(System.currentTimeMillis()-lastRefresh) ));
+        return valid;
+    }
+    
     public static ValueCache GetInstance()
     {
         if (valueCacheInstance==null)
@@ -30,13 +47,17 @@ public class ValueCache {
     public void clear()
     {
         log.debug("Clean Cache");
+        lastRefresh=System.currentTimeMillis();
+         
         this.valueCache.clear();
     }
+    
     
     public void addValue(String path,String value)
     {
         log.debug("set Value "+path+" :: "+value);
-        valueCache.put(path,value);
+        valueCache.put(path,value.toLowerCase());
+         
     }
     
     public void addValue(String id, String channel, String port,String value)
@@ -48,7 +69,7 @@ public class ValueCache {
     public String getValue(String id, String channel, String port)
     {
         String path=id+":"+channel+":"+port;
-        return this.getValue(path);
+        return this.getValue(path) ;
         
     }
     
@@ -58,10 +79,10 @@ public class ValueCache {
         if (value== null)
         {
             log.warn("No value found for path :"+path);
-            value="";
+            value="na";
         }
         log.debug("value request :"+path+" = "+value);
-        return value;
+        return value.toLowerCase();
     }
     
     

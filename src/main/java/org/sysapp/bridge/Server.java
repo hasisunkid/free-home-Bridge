@@ -12,14 +12,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
+ 
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.json.JsonValue;
+import javax.security.auth.login.Configuration;
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.core.config.Configurator;
+ 
+ 
 import org.jdom2.JDOMException;
 import rocks.xmpp.core.XmppException;
 import rocks.xmpp.core.session.TcpConnectionConfiguration;
@@ -48,7 +52,7 @@ public class Server {
         // load a properties file
         Properties prop = new Properties();
         prop.load(input);
-         PropertyConfigurator.configure(prop);
+        Configurator.initialize(null, prop.getProperty("log4j.conig","./log4j.xml"));
         log.info("init Server load configuration from :" + args[0]);
         String host = prop.getProperty("sysap.host");
         String name = prop.getProperty("sysap.loginname");
@@ -59,9 +63,16 @@ public class Server {
         String mqtt_broker=prop.getProperty("mqtt.broker", "localhost");
         String mqtt_user=prop.getProperty("mqtt.user", "");
         String mqtt_pwd=prop.getProperty("mqtt.pwd", "");
-        long mqtt_poll=Long.valueOf(prop.getProperty("mqtt.pollint", "60"));
+        long mqtt_poll=Long.valueOf(prop.getProperty("mqtt.pollint", "30"));
         int mqtt_port = Integer.valueOf(prop.getProperty("mqtt.port", "1883"));
         
+         int port_bosh = Integer.valueOf(prop.getProperty("sysap.port.bosh", "5280"));
+        int port_tcp = Integer.valueOf(prop.getProperty("sysap.port.tcp", "5222"));
+        int port_bridge = Integer.valueOf(prop.getProperty("bridge.port", "8085"));
+
+        boolean xmppDebug = Boolean.valueOf(prop.getProperty("xmpp.debug", "false"));
+        boolean http_protokoll = Boolean.valueOf(prop.getProperty("server.http", "false"));
+        boolean mqtt_protokoll = Boolean.valueOf(prop.getProperty("server.mqtt", "true"));
         
         int cacheRetention=Integer.valueOf(prop.getProperty("bridge.cacheretention", "12000"));
         String id=null;
@@ -98,11 +109,7 @@ public class Server {
             IOUtils.closeQuietly(in);
         }
 
-        int port_bosh = Integer.valueOf(prop.getProperty("sysap.port.bosh", "5280"));
-        int port_tcp = Integer.valueOf(prop.getProperty("sysap.port.tcp", "5222"));
-        int port_bridge = Integer.valueOf(prop.getProperty("bridge.port", "8085"));
-
-        boolean xmppDebug = Boolean.valueOf(prop.getProperty("xmpp.debug", "false"));
+       
 
         TcpConnectionConfiguration tcpConfiguration = TcpConnectionConfiguration.builder()
                 .hostname(host)
@@ -125,50 +132,27 @@ public class Server {
         }
 
         XmppClient xmppClient = XmppClient.create(domain, configuration, tcpConfiguration, boshConfiguration);
-
+        xmppClient.connect();
+        xmppClient.login(id, pwd, resource);
         BridgeServer server=new BridgeServer( xmppClient,cacheRetention);
         server.addCommand("org.sysapp.bridge.commands.HeatControll");
         server.addCommand("org.sysapp.bridge.commands.ShutterControll");
         server.registerAliastable(prop);
         
-       // HttpServer httpServer=new HttpServer(port_bridge, server);
-        
-        
-         //httpServer.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
-         
+    
+
+      if (mqtt_protokoll)
+      {
          MqttServer mqtt=new MqttServer();
          mqtt.start(mqtt_broker,mqtt_port,mqtt_user,mqtt_pwd,mqtt_poll,server);
 
-//    xmppClient.addInboundPresenceListener(e -> {
-//        System.out.println(e.getPresence().getStatus());
-//    // Handle inbound presence.
-//});
-//// Listen for messages
-//xmppClient.addInboundMessageListener(e -> {System.out.println(e.getMessage().getBody());
-//    // Handle inbound message
-//});
-//// Listen for roster pushes
-//xmppClient.getManager(RosterManager.class).addRosterListener(e -> {
-//System.out.println(e.toString());
-//});
-//        RpcManager rpcManager = xmppClient.getManager(RpcManager.class);
-//        rpcManager.setRpcHandler((requester, methodName, parameters) -> {
-//
-//            if (!parameters.isEmpty()) {
-//
-//                System.out.println("Method name:" + methodName);
-//                return Value.of("Colorado");
-//
-//            }
-//            throw new RpcException(123, "Invalid method name or parameter.");
-//        });
-//
-//        xmppClient.connect();
-//        // it is not a real user name ???
-//        xmppClient.login(id, pwd, resource);
-        xmppClient.connect();
-//        // it is not a real user name ???
-        xmppClient.login(id, pwd, resource);
+        
+    }
+      if (http_protokoll)
+      {
+          HttpServer httpServer= new HttpServer(port_tcp, server);
+          httpServer.start();
+      }
     }
 
 }

@@ -12,6 +12,7 @@ import java.util.Locale;
 import java.util.Map;
 import org.sysapp.bridge.FreeHomeCommandAbstractionInterface;
 import org.sysapp.bridge.FreeHomeXMPBasicCommands;
+import org.sysapp.bridge.ValueCache;
 
 /**
  *
@@ -65,6 +66,7 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
                 //     turn heat on
                 basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "1");
                 affectedTopics.put(String.format("%s/%s/state", topicPrefix, alias), "on");
+
             } else {
                 basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "0");
                 affectedTopics.put(String.format("%s/%s/state", topicPrefix, alias), "off");
@@ -72,26 +74,24 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
         } else if (command.endsWith("command/temp")) {
             basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "1");
 //          
-try {
-            float new_tmp = Float.parseFloat(value);
-            if (new_tmp < 0) {
-                new_tmp = 0;
+            try {
+                float new_tmp = Float.parseFloat(value);
+                if (new_tmp < 0) {
+                    new_tmp = 0;
+                }
+                if (new_tmp > 35) {
+                    new_tmp = 35;
+                }
+                float current_tmp = Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_TEMP, false));
+                float current_pos = Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_SWITCH_POS, true));
+                float delta_tmp = new_tmp - current_tmp;
+                String d_t = String.format(Locale.US, "%.1f", delta_tmp + current_pos);
+                log.debug(" sending delta position T " + d_t);
+                basicCommands.setDataPoint(id, ch, S_PO_H_SET, d_t);
+                affectedTopics.put(String.format("%s/%s/setpoint", topicPrefix, alias), String.format("%.2f", new_tmp));
+            } catch (NumberFormatException ex) {
+                log.warn(value + " is not a valid flotingpoint number toppic:" + command);
             }
-            if (new_tmp > 35) {
-                new_tmp = 35;
-            }
-            float current_tmp = Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_TEMP, false));
-            float current_pos = Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_SWITCH_POS, true));
-            float delta_tmp = new_tmp - current_tmp;
-            String d_t = String.format(Locale.US, "%.1f", delta_tmp + current_pos);
-            log.debug(" sending delta position T " + d_t);
-            basicCommands.setDataPoint(id, ch, S_PO_H_SET, d_t);
-            affectedTopics.put(String.format("%s/%s/setpoint", topicPrefix, alias), String.format("%.2f", new_tmp));
-}
-catch (NumberFormatException ex)
-{
-    log.warn(value+" is not a valid flotingpoint number toppic:"+command);
-}
         }
 
         return affectedTopics;

@@ -24,7 +24,9 @@ public class ShutterControll implements FreeHomeCommandAbstractionInterface {
     private int status = 200;
     private String error = "no Errors";
     private String result = "";
-
+    
+    private final String topicPrefix = "free_home/shutter";
+    
     public ShutterControll() {
 
         log.info("http://...../shut?id=XXXXX&ch=xxxxx&set=[UP|DOWN|STOP] ");
@@ -80,22 +82,72 @@ public class ShutterControll implements FreeHomeCommandAbstractionInterface {
 
     @Override
     public Map<String, String> getTopics(FreeHomeXMPBasicCommands basicCommands) {
-        return new HashMap<>();
+        HashMap<String, String> topics = new HashMap<>();
+         basicCommands.getAlias().keySet().stream().filter((alias) -> alias.toLowerCase().endsWith("shut")).forEach((alias)
+                -> {
+            String path[] = basicCommands.resolveDeviceAlias(alias);
+            String id = path[0];
+            String ch = path[1];
+
+             topics.put(String.format("%s/%s/state", topicPrefix, alias), "stop");
+              
+        }
+        );
+        return topics;
     }
 
     @Override
     public List<String> subsciptionList(FreeHomeXMPBasicCommands basicCommands) {
-     return new ArrayList<>();
+            ArrayList<String> subTopics = new ArrayList<>();
+
+        basicCommands.getAlias().keySet().stream().filter((alias) -> alias.toLowerCase().endsWith("shut")).forEach((alias)
+                -> {
+            subTopics.add(String.format("%s/%s/command", topicPrefix, alias));
+             
+        });
+        return subTopics;
     }
 
     @Override
     public Map<String,String> execute(String command, String value, FreeHomeXMPBasicCommands basicCommands) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        HashMap<String, String> affectedTopics = new HashMap<>();
+        String alias = command.split("/")[2];
+        String path[] = basicCommands.resolveDeviceAlias(alias);
+        String id = path[0];
+        String ch = path[1];
+        boolean   invalid=false;
+         if (command.endsWith("command")) {
+            log.debug("change shutter state "+command+" "+value);
+            if (value.equalsIgnoreCase("up")) {
+                
+               basicCommands.setDataPoint(id, ch, S_PO_UP_DOWN, "0");
+               affectedTopics.put(String.format("%s/%s/state", topicPrefix, alias), "up");
+            } else if (value.equalsIgnoreCase("down"))
+            {
+                  basicCommands.setDataPoint(id, ch, S_PO_UP_DOWN, "1");
+                  affectedTopics.put(String.format("%s/%s/state", topicPrefix, alias), "down");
+            } else if (value.equalsIgnoreCase("stop"))
+            {
+                    
+                 basicCommands.setDataPoint(id, ch, S_PO_STOP, "1");
+                 affectedTopics.put(String.format("%s/%s/state", topicPrefix, alias), "stop");
+            }else
+            {
+                invalid=true;
+            }
+         
+         }
+         
+         if (invalid)
+         {
+             log.warn(String.format("command (%s) not valid with %S", command,value));
+         }
+        return affectedTopics;
     }
 
     @Override
     public boolean matchWithTopicPath(String path) {
-        return false;
+          return path.startsWith(topicPrefix);
     }
 
 }

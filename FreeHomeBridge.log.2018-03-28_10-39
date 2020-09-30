@@ -1,7 +1,0 @@
-2018-03-28 10:39:58,173 DEBUG [NanoHttpd Request Processor (#5)] org.sysapp.bridge.HttpServer: Key:set
-2018-03-28 10:39:58,178 DEBUG [NanoHttpd Request Processor (#5)] org.sysapp.bridge.HttpServer: Key:alias
-2018-03-28 10:39:58,178 INFO  [NanoHttpd Request Processor (#5)] org.sysapp.bridge.HttpServer: resolve arbeit_heat to :ABB700C78A20/ch0000
-2018-03-28 10:39:58,178 DEBUG [NanoHttpd Request Processor (#5)] org.sysapp.bridge.commands.HeatControll: Heat Request on ABB700C78A20:ch0000
-2018-03-28 10:39:58,178 DEBUG [NanoHttpd Request Processor (#5)] org.sysapp.bridge.HttpServer: ABB700C78A20/ch0000/idp0011set 0
-2018-03-28 10:39:58,256 DEBUG [NanoHttpd Request Processor (#5)] org.sysapp.bridge.HttpServer: Result:
-2018-03-28 10:39:58,256 DEBUG [NanoHttpd Request Processor (#5)] org.sysapp.bridge.HttpServer: 

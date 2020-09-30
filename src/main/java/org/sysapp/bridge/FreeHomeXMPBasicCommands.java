@@ -6,9 +6,15 @@
 package org.sysapp.bridge;
 
 import java.util.HashMap;
+ 
 import javax.json.JsonObject;
+import org.apache.logging.log4j.LogManager;
+ 
 import rocks.xmpp.core.session.XmppClient;
 import rocks.xmpp.extensions.rpc.RpcManager;
+
+import org.apache.logging.log4j.Logger;
+
 
 /**
  *
@@ -19,8 +25,9 @@ public abstract class  FreeHomeXMPBasicCommands {
      public abstract String getValue(String id, String ch, String port,boolean useCache) ;
      public abstract String[] resolveDeviceAlias(String alias);
      public abstract JsonObject getDevices(boolean useCahce);
+     
       
-    public static org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(BridgeServer.class);
+    public static Logger log =  LogManager.getLogger(FreeHomeXMPBasicCommands.class);
     protected XmppClient xmppClient;
     protected RpcManager rpcManager;
     protected static long requestCacheTime = 0;
