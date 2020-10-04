@@ -11,7 +11,6 @@ import java.util.TimerTask;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
- 
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
@@ -33,7 +32,7 @@ public class MqttServer extends TimerTask implements MqttCallback {
     /**
      * @param args the command line arguments
      */
-    private static final Logger log =  LogManager.getLogger(MqttServer.class);
+    private static final Logger log = LogManager.getLogger(MqttServer.class);
 
     private final HashMap<String, String> topics;
 
@@ -51,7 +50,8 @@ public class MqttServer extends TimerTask implements MqttCallback {
         this.topics = new HashMap<>();
     }
 
-    public void start(String host, int port, String user, String pwd, long poolIntervall, FreeHomeXMPBasicCommands commands) {
+    public void start(String host, int port, String user, String pwd, long poolIntervall,
+            FreeHomeXMPBasicCommands commands) {
 
         try {
             String broker = String.format("tcp://%s:%d", host, port);
@@ -68,7 +68,7 @@ public class MqttServer extends TimerTask implements MqttCallback {
             this.commands = commands;
 
             // MqttMessage message = new MqttMessage("23".getBytes());
-            //sampleClient.publish("freehome/heat/ist", message);
+            // sampleClient.publish("freehome/heat/ist", message);
             subscribe(commands);
             Timer t = new Timer();
             t.scheduleAtFixedRate(this, 0, poolIntervall * 1000);
@@ -102,7 +102,7 @@ public class MqttServer extends TimerTask implements MqttCallback {
 
     private void buildToppicList(FreeHomeXMPBasicCommands basicCommand) {
 
-        Runnable toppocBuildExecutor= new Runnable() {
+        Runnable toppocBuildExecutor = new Runnable() {
             @Override
             public void run() {
                 if (requestRunning) {
@@ -114,10 +114,10 @@ public class MqttServer extends TimerTask implements MqttCallback {
                     command.getTopics(basicCommand).forEach((topic, value) -> {
                         String tValue = topics.getOrDefault(topic, null);
                         if (tValue == null || (!tValue.equalsIgnoreCase(value) && (value.length() > 0))) {
-                            log.info(String.format("Change on topic %s : %s old value %s", topic, value, tValue));
+                            log.info(String.format("Change on topic %s : %s old value was %s", topic, value, tValue));
                             MqttMessage message = new MqttMessage(value.getBytes());
                             topics.put(topic, value);
-                            
+
                             try {
                                 mqttClient.publish(topic, message);
                             } catch (MqttException ex) {
@@ -129,13 +129,14 @@ public class MqttServer extends TimerTask implements MqttCallback {
                 });
             }
         };
-        
+
         executor.execute(toppocBuildExecutor);
-        try {
-            executor.awaitTermination(1, TimeUnit.MINUTES);
-        } catch (InterruptedException ex) {
-           log.warn("timeout ",ex);
-        }
+        // try {
+        // executor.shutdown();
+        // executor.awaitTermination(1, TimeUnit.MINUTES);
+        // } catch (InterruptedException ex) {
+        // log.warn("timeout ", ex);
+        // }
     }
 
     @Override
@@ -143,6 +144,7 @@ public class MqttServer extends TimerTask implements MqttCallback {
         log.error("Connection lost", thrwbl);
         try {
             mqttClient.connect();
+            log.info("reconnect");
         } catch (MqttException ex) {
             log.error("cant reconnect", ex);
         }
@@ -155,35 +157,31 @@ public class MqttServer extends TimerTask implements MqttCallback {
         Runnable deligate = new Runnable() {
             @Override
             public void run() {
-                commands.getCommands().values().stream().filter((comm) -> comm.matchWithTopicPath(topic)).findFirst().ifPresent((comm) -> {
-                    comm.execute(topic, new String(mm.getPayload()), commands).forEach((t, v) -> {
-                        topics.put(t, v);
-                        MqttMessage message = new MqttMessage(v.getBytes());
+                commands.getCommands().values().stream().filter((comm) -> comm.matchWithTopicPath(topic)).findFirst()
+                        .ifPresent((comm) -> {
+                            comm.execute(topic, new String(mm.getPayload()), commands).forEach((t, v) -> {
+                                topics.put(t, v);
+                                MqttMessage message = new MqttMessage(v.getBytes());
 
-                        try {
-                            log.info(String.format("publish %s :%s", t, v));
-                            mqttClient.publish(t, message);
-                        } catch (MqttException ex) {
-                            log.error("can't publish topic", ex);
-                        }
-                    });
+                                try {
+                                    log.info(String.format("publish %s :%s", t, v));
+                                    mqttClient.publish(t, message);
+                                } catch (MqttException ex) {
+                                    log.error("can't publish topic", ex);
+                                }
+                            });
 
-                });
+                        });
             }
         };
-    executor.execute(deligate);
-    
+        executor.execute(deligate);
 
-        
-  
-       
     }
 
     @Override
     public void deliveryComplete(IMqttDeliveryToken imdt) {
- 
-            log.debug("delivery compleet OK ");
-       
+
+        log.debug("delivery compleet OK ");
 
     }
 

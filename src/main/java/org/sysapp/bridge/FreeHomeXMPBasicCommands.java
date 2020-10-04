@@ -6,28 +6,31 @@
 package org.sysapp.bridge;
 
 import java.util.HashMap;
- 
+
 import javax.json.JsonObject;
 import org.apache.logging.log4j.LogManager;
- 
+
 import rocks.xmpp.core.session.XmppClient;
 import rocks.xmpp.extensions.rpc.RpcManager;
 
 import org.apache.logging.log4j.Logger;
 
-
 /**
  *
  * @author enrico
  */
-public abstract class  FreeHomeXMPBasicCommands {
-     public abstract void setDataPoint(String serialNum, String channel, String port, String value) ;
-     public abstract String getValue(String id, String ch, String port,boolean useCache) ;
-     public abstract String[] resolveDeviceAlias(String alias);
-     public abstract JsonObject getDevices(boolean useCahce);
-     
-      
-    public static Logger log =  LogManager.getLogger(FreeHomeXMPBasicCommands.class);
+public abstract class FreeHomeXMPBasicCommands {
+    public abstract void setDataPoint(String serialNum, String channel, String port, String value);
+
+    public abstract void setDataPoint(String serialNum, String channel, String port, String value, String cachedValue);
+
+    public abstract String getValue(String id, String ch, String port, boolean useCache);
+
+    public abstract String[] resolveDeviceAlias(String alias);
+
+    public abstract JsonObject getDevices(boolean useCahce);
+
+    public static Logger log = LogManager.getLogger(FreeHomeXMPBasicCommands.class);
     protected XmppClient xmppClient;
     protected RpcManager rpcManager;
     protected static long requestCacheTime = 0;
@@ -65,7 +68,8 @@ public abstract class  FreeHomeXMPBasicCommands {
     public boolean isUseCache() {
         return useCache;
     }
+
     protected HashMap<String, FreeHomeCommandAbstractionInterface> commands;
     protected HashMap<String, String[]> alias;
-    protected boolean useCache=true;
+    protected boolean useCache = true;
 }

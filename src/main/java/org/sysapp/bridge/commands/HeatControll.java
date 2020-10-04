@@ -60,20 +60,28 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
         String id = path[0];
         String ch = path[1];
 
-        if (command.endsWith("command/state")) {
+        if (command.endsWith("state")) {
             log.debug("change heating state");
             if (value.equalsIgnoreCase("on")) {
-                //     turn heat on
-                basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "1");
+                // turn heat on
+                basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "1", "1");
+                // float current_tmp = Float.parseFloat(basicCommands.getValue(id, ch,
+                // R_PO_H_TEMP, false));
+                float current_pos = Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_SWITCH_POS, true));
+
+                // affectedTopics.put(String.format("%s/%s/setpoint", topicPrefix, alias),
+                // String.format("%.1f", current_pos));
+
                 affectedTopics.put(String.format("%s/%s/state", topicPrefix, alias), "on");
 
             } else {
-                basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "0");
+                basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "0", "0");
                 affectedTopics.put(String.format("%s/%s/state", topicPrefix, alias), "off");
             }
-        } else if (command.endsWith("command/temp")) {
-            basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "1");
-//          
+        } else if (command.endsWith("setpoint")) {
+            basicCommands.setDataPoint(id, ch, S_PO_H_ON_OFF, "1", "1");
+            log.info("Change set point to" + value);
+            //
             try {
                 float new_tmp = Float.parseFloat(value);
                 if (new_tmp < 0) {
@@ -87,8 +95,9 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
                 float delta_tmp = new_tmp - current_tmp;
                 String d_t = String.format(Locale.US, "%.1f", delta_tmp + current_pos);
                 log.debug(" sending delta position T " + d_t);
-                basicCommands.setDataPoint(id, ch, S_PO_H_SET, d_t);
-                affectedTopics.put(String.format("%s/%s/setpoint", topicPrefix, alias), String.format("%.2f", new_tmp));
+                basicCommands.setDataPoint(id, ch, S_PO_H_SET, d_t, String.format(Locale.US, "%.1f", new_tmp));
+                affectedTopics.put(String.format("%s/%s/setpoint", topicPrefix, alias),
+                        String.format(Locale.US, "%.1f", new_tmp));
             } catch (NumberFormatException ex) {
                 log.warn(value + " is not a valid flotingpoint number toppic:" + command);
             }
@@ -99,7 +108,8 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
     }
 
     @Override
-    public FreeHomeCommandAbstractionInterface execute(Map<String, String> parms, FreeHomeXMPBasicCommands basicCommands) {
+    public FreeHomeCommandAbstractionInterface execute(Map<String, String> parms,
+            FreeHomeXMPBasicCommands basicCommands) {
         String id;
         String ch;
         if (parms.containsKey("alias")) {
@@ -138,7 +148,7 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
                 }
 
             }
-        } //set Heat Values
+        } // set Heat Values
         else if (parms.containsKey("set")) {
             String set = parms.get("set");
             if (set.equalsIgnoreCase("on")) {
@@ -189,22 +199,25 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
 
         HashMap<String, String> topics = new HashMap<>();
         String topic = "free_home/heat";
-        command.getAlias().keySet().stream().filter((alias) -> alias.toLowerCase().endsWith("heat")).forEach((alias)
-                -> {
-            String path[] = command.resolveDeviceAlias(alias);
-            String id = path[0];
-            String ch = path[1];
+        command.getAlias().keySet().stream().filter((alias) -> alias.toLowerCase().endsWith("heat"))
+                .forEach((alias) -> {
+                    String path[] = command.resolveDeviceAlias(alias);
+                    String id = path[0];
+                    String ch = path[1];
 
-            topics.put(String.format("%s/%s/temp", topic, alias), command.getValue(id, ch, R_PO_R_TEMP, true));
-            topics.put(String.format("%s/%s/state", topic, alias), command.getValue(id, ch, R_PO_H_ON_OFF, true).equalsIgnoreCase("1") ? "ON" : "OFF");
-            if (command.getValue(id, ch, R_PO_H_ON_OFF, false).equalsIgnoreCase("1")) {
-                topics.put(String.format("%s/%s/setpoint", topic, alias), command.getValue(id, ch, R_PO_H_TEMP, true));
+                    topics.put(String.format("%s/%s/temp", topic, alias), command.getValue(id, ch, R_PO_R_TEMP, true));
+                    topics.put(String.format("%s/%s/state", topic, alias),
+                            command.getValue(id, ch, R_PO_H_ON_OFF, false).equalsIgnoreCase("1") ? "on" : "off");
+                    topics.put(String.format("%s/%s/setpoint", topic, alias),
+                            command.getValue(id, ch, R_PO_H_TEMP, true));
+                    // if (command.getValue(id, ch, R_PO_H_ON_OFF, true).equalsIgnoreCase("1")) {
+                    // topics.put(String.format("%s/%s/setpoint", topic, alias),
+                    // command.getValue(id, ch, R_PO_H_TEMP, true));
 
-            } else {
-                topics.put(String.format("%s/%s/setpoint", topic, alias), "0");
-            }
-        }
-        );
+                    // } else {
+                    // topics.put(String.format("%s/%s/setpoint", topic, alias), "0");
+                    // }
+                });
         return topics;
     }
 
@@ -212,12 +225,13 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
     public List<String> subsciptionList(FreeHomeXMPBasicCommands basicCommands) {
         ArrayList<String> subTopics = new ArrayList<>();
 
-        basicCommands.getAlias().keySet().stream().filter((alias) -> alias.toLowerCase().endsWith("heat")).forEach((alias)
-                -> {
-            subTopics.add(String.format("%s/%s/command/temp", topicPrefix, alias));
-            subTopics.add(String.format("%s/%s/command/state", topicPrefix, alias));
-        });
+        basicCommands.getAlias().keySet().stream().filter((alias) -> alias.toLowerCase().endsWith("heat"))
+                .forEach((alias) -> {
+                    subTopics.add(String.format("%s/%s/setpoint", topicPrefix, alias));
+                    subTopics.add(String.format("%s/%s/state", topicPrefix, alias));
+                });
         return subTopics;
+
     }
 
     @Override

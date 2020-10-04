@@ -1,2 +1,12 @@
-org/sysapp/bridge/HttpServer.class
+org/sysapp/bridge/commands/HeatControll.class
+org/sysapp/bridge/MqttServer.class
+org/sysapp/bridge/MqttServer$2.class
+org/sysapp/bridge/BridgeServer$1.class
+org/sysapp/bridge/FreeHomeCommandAbstractionInterface.class
+org/sysapp/bridge/MqttServer$1.class
 org/sysapp/bridge/Server.class
+org/sysapp/bridge/BridgeServer.class
+org/sysapp/bridge/HttpServer.class
+org/sysapp/bridge/commands/ShutterControll.class
+org/sysapp/bridge/FreeHomeXMPBasicCommands.class
+org/sysapp/bridge/ValueCache.class
