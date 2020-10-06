@@ -77,7 +77,7 @@ public class ValueCache {
 
     public void toLog() {
         this.valueCache.forEach((k, v) -> {
-            log.info(String.format("cache %s \t::\t %s", k, v));
+            log.debug(String.format("cache %s \t::\t %s", k, v));
         });
     }
 

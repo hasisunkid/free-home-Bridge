@@ -93,11 +93,11 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
                 float current_tmp = Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_TEMP, false));
                 float current_pos = Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_SWITCH_POS, true));
                 float delta_tmp = new_tmp - current_tmp;
-                String d_t = String.format(Locale.US, "%.1f", delta_tmp + current_pos);
+                String d_t = String.format(Locale.US, "%.2f", delta_tmp + current_pos);
                 log.debug(" sending delta position T " + d_t);
-                basicCommands.setDataPoint(id, ch, S_PO_H_SET, d_t, String.format(Locale.US, "%.1f", new_tmp));
+                basicCommands.setDataPoint(id, ch, S_PO_H_SET, d_t, String.format(Locale.US, "%.2f", new_tmp));
                 affectedTopics.put(String.format("%s/%s/setpoint", topicPrefix, alias),
-                        String.format(Locale.US, "%.1f", new_tmp));
+                        String.format(Locale.US, "%.2f", new_tmp));
             } catch (NumberFormatException ex) {
                 log.warn(value + " is not a valid flotingpoint number toppic:" + command);
             }
@@ -170,7 +170,7 @@ public class HeatControll implements FreeHomeCommandAbstractionInterface {
                 float current_tmp = Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_TEMP, false));
                 float current_pos = Float.parseFloat(basicCommands.getValue(id, ch, R_PO_H_SWITCH_POS, true));
                 float delta_tmp = new_tmp - current_tmp;
-                String d_t = String.format(Locale.US, "%.1f", delta_tmp + current_pos);
+                String d_t = String.format(Locale.US, "%.2f", delta_tmp + current_pos);
                 log.debug(" sending delta position T " + d_t);
                 basicCommands.setDataPoint(id, ch, S_PO_H_SET, d_t);
                 this.result = basicCommands.getValue(id, ch, R_PO_H_TEMP, true);

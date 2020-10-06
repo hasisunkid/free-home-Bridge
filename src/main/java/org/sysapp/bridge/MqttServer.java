@@ -11,6 +11,7 @@ import java.util.TimerTask;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
@@ -61,6 +62,7 @@ public class MqttServer extends TimerTask implements MqttCallback {
             connOpts.setUserName("iobroker");
             connOpts.setPassword("123".toCharArray());
             connOpts.setCleanSession(true);
+            
             log.info("Connecting to broker: " + broker);
             mqttClient.setCallback(this);
             mqttClient.connect(connOpts);
@@ -141,13 +143,20 @@ public class MqttServer extends TimerTask implements MqttCallback {
 
     @Override
     public void connectionLost(Throwable thrwbl) {
-        log.error("Connection lost", thrwbl);
+        
+        
+        int conncount=1;
+        while (!mqttClient.isConnected()){
+            log.warn("Connection lost waiting 10 s try nr:"+conncount, thrwbl);
+                conncount++;
         try {
-            mqttClient.connect();
+            TimeUnit.SECONDS.sleep(10);
+            mqttClient.reconnect();
             log.info("reconnect");
-        } catch (MqttException ex) {
-            log.error("cant reconnect", ex);
+        } catch (MqttException | InterruptedException ex) {
+            log.error("can' t reconnect");
         }
+        } 
     }
 
     @Override
