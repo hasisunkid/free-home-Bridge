@@ -92,8 +92,9 @@ public class MqttServer extends TimerTask implements MqttCallback {
             command.subsciptionList(basicCommand).forEach((subTop) -> {
                 MqttMessage message = new MqttMessage("".getBytes());
                 try {
-                    this.mqttClient.publish(subTop, message);
+                    //this.mqttClient.publish(subTop, message);
                     this.mqttClient.subscribe(subTop);
+                    log.info("subscribe to"+subTop);
                 } catch (MqttException ex) {
                     log.error("can't publish topic", ex);
                 }
